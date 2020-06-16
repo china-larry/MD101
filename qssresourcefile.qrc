@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/qss">
+        <file>LoginPage/LoginPage.qss</file>
+    </qresource>
+    <qresource prefix="/image"/>
+</RCC>

@@ -1,0 +1,148 @@
+QPushButton#m_pLoginButton
+{
+    color : rgb(255, 255, 255);
+    background-color: rgb(30, 141, 255);
+    font-family:"Arial";
+    font-size: 20px;
+    font-weight : bold;
+    border-radius: 3px;
+    height: 55;
+    width: 180;
+}
+QPushButton#m_pPasswordHidButton
+{
+    color : rgb(255, 255, 255, 0);
+    background-color: rgb(0, 0, 255, 0);
+    border: 0px solid #c9c9c9;
+    border-radius: 3px;
+
+}
+/*QPushButton:hover{
+        background: rgb(85, 85, 85);
+}
+
+QPushButton:pressed{
+        background: rgb(4, 115, 239);
+}*/
+/*
+QPushButton:checked{
+        background: green;
+}
+*/
+
+QLabel#m_pLoginLabel
+{
+    font-family:"Arial";
+    font-size: 32px;
+    color : rgb(20, 20, 20);
+}
+QLabel
+{
+    font-family:"Arial";
+    font-size: 18px;
+    color : rgb(20, 20, 20);
+}
+QLineEdit
+{
+    border: 2px solid #529BFF;
+    border-radius: 5px;
+    font-family:"Arial";
+    font-size: 23px;
+    height: 55px;
+    width: 280px;
+}
+QComboBox
+{
+    height: 55px;
+    width: 240px;
+    color: #000; /* text color */
+    font-family: "Arial";
+    font-size: 22px;
+    border: 2px solid #529BFF;
+    border-radius:5px;
+
+}
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 40px;
+
+    border-left-width: 0px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    image: url(:/image/ico/test/commod.png);
+}
+QComboBox QAbstractItemView
+{
+        border: 2px solid darkgray;/*下拉列表的边线的粗细、实虚*/
+        selection-background-color: blue;/*下拉列表选中的行的背景色*/
+        color: #000; /* text color */
+        font-family: "Arial";
+        font-size: 22px;
+}
+QComboBox QAbstractItemView::item
+{
+        min-height: 30px;/*下拉列表的行高，也可以看做行距*/
+        color: #000; /* text color */
+        font-family: "Arial";
+        font-size: 22px;
+}
+/*垂直滚动条整体*/
+QScrollBar:vertical
+{
+    width:25px;
+    background:rgb(30, 141, 255,0%);
+    margin:0px,0px,0px,0px;
+    padding-top:25px;   /*上预留位置*/
+    padding-bottom:25px;    /*下预留位置*/
+}
+
+/*滚动条中滑块的样式*/
+QScrollBar::handle:vertical
+{
+    width:25px;
+    background:rgb(30, 141, 255,25%);
+    border-radius:4px;
+    min-height:20px;
+}
+
+/*鼠标触及滑块样式*/
+QScrollBar::handle:vertical:hover
+{
+    width:30px;
+    background:rgb(30, 141, 255,50%);
+    border-radius:4px;
+    min-width:20;
+}
+/*垂直滚动条整体*/
+QScrollBar:horizontal
+{
+    height:25px;
+    background:rgb(30, 141, 255,0%);
+    margin:0px,0px,0px,0px;
+    padding-left:25px;   /*上预留位置*/
+    padding-right:25px;    /*下预留位置*/
+}
+
+/*滚动条中滑块的样式*/
+QScrollBar::handle:horizontal
+{
+    height:25px;
+    background:rgb(30, 141, 255,25%);
+    border-radius:4px;
+    min-width:20px;
+}
+
+/*鼠标触及滑块样式*/
+QScrollBar::handle:horizontal:hover
+{
+    height:30px;
+    background:rgb(30, 141, 255,50%);
+    border-radius:4px;
+    min-height:20;
+}
