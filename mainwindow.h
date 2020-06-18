@@ -2,6 +2,10 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QStackedWidget>
+
+#include "MDWidget/CPageStatusWidget.h"
+#include "MDWidget/CPageTitleWidget.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -14,8 +18,32 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    void resizeEvent(QResizeEvent *);
 
+public slots:
+    void SlotShwoMenu();
+private slots:
+    void _SlotMenuChanged(QModelIndex index);
+private:
+    void _InitWidget();
+    void _InitLayout();
 private:
     Ui::MainWindow *ui;
+    QVBoxLayout *m_pMainLayout;
+    QWidget *m_pCentralWidget;// 布局
+
+    // 多标签 切换控件
+    QStackedWidget *m_pStackedWidget;
+
+    CPageTitleWidget *m_pCPageTitleWidget;
+    CPageStatusWidget *m_pCPageStatusWidget;
+
+    int m_kiTitleHeight;// 标题栏高度
+    int m_kiStatusBarHeight;
+    QRect m_iWidgetRect;
+
+    QListView *m_pQListView;
+    bool m_bShowMenu;
+
 };
 #endif // MAINWINDOW_H

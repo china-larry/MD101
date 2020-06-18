@@ -38,49 +38,20 @@ void CHistoryDB::InitDataBase()
     {
         QString strCreateTable  = "CREATE TABLE historydata ("
                                   "id INTEGER PRIMARY KEY AUTOINCREMENT,"
-                                  "DonorFirstName VARCHAR,"
-                                  "DonorLastName VARCHAR,"
+                                  "SampleID VARCHAR,"
+                                  "ProjectName VARCHAR,"
                                   "TestTime VARCHAR,"
-                                  "Age VARCHAR,"
-                                  "DonorID VARCHAR,"
-                                  "TestSite VARCHAR,"
+                                  "Result VARCHAR,"
                                   "Operator VARCHAR,"
-                                  "PreEmployment VARCHAR,"
-                                  "Random VARCHAR,"
-                                  "Scheduled VARCHAR,"
-                                  "PInitial VARCHAR,"
-                                  "CourtHearing VARCHAR,"
-                                  "PostAccident VARCHAR,"
-                                  "Reasonable VARCHAR,"
-                                  "FollowUp VARCHAR,"
-                                  "OtherReason VARCHAR,"
-                                  "Comments VARCHAR,"
-                                  "TemperatureNormal VARCHAR,"
-                                  "Gender VARCHAR,"
-                                  "ProductDefinition VARCHAR,"
-                                  "ExpirationDate VARCHAR,"
-                                  "ProductLot VARCHAR,"
-                                  "ProductID VARCHAR,"
-                                  "ProgramsNumber INT,";
-        for(int i = 0; i < m_iMaxTestResult; ++i)
-        {
-            strCreateTable += QString("ProgramName") + QString::number(i) + QString(" VARCHAR,");
-            strCreateTable += QString("Result") + QString::number(i) + QString(" VARCHAR,");
-            strCreateTable += QString("Cutoff") + QString::number(i) + QString(" VARCHAR,");
-            strCreateTable += QString("T") + QString::number(i) + QString(" VARCHAR,");
-            strCreateTable += QString("C") + QString::number(i) + QString(" VARCHAR,");
-            strCreateTable += QString("T_C") + QString::number(i) + QString(" VARCHAR,");
-            strCreateTable += QString("ImagePath") + QString::number(i) + QString(" VARCHAR,");
-        }
-        strCreateTable += "PrintImagePath VARCHAR)";
+                                  "Status VARCHAR,"
+                                  "Remarks VARCHAR)";
 
-       // //-qDebug() << "cread history " << strCreateTable;
-
+       // qDebug() << "cread history " << strCreateTable;
         // 创建
         QSqlQuery qSqlQuery(m_qSqldb);
         if (!qSqlQuery.exec(strCreateTable))
         {
-            //-qDebug() << " database error: " << qSqlQuery.lastError().text();
+            qDebug() << " database error: " << qSqlQuery.lastError().text();
         }
     }
 }

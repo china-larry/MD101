@@ -27,10 +27,17 @@ SOURCES += \
     DataControl/CProjectDB.cpp \
     DataControl/CUserInfoDB.cpp \
     DataControl/ParamsConfiguration.cpp \
+    HistoryPage/CHistoryPage.cpp \
     LoginPage/CLoginInWidget.cpp \
+    MDWidget/CPageStatusWidget.cpp \
+    MDWidget/CPageTitleWidget.cpp \
+    MuItemDelegate.cpp \
     PublicConfig.cpp \
     PublicFunction.cpp \
     PublicWidget.cpp \
+    SettingPage/CSettingPage.cpp \
+    StatusPage/CStatusPage.cpp \
+    TestPage/CTestPage.cpp \
     main.cpp \
     mainwindow.cpp
 
@@ -42,10 +49,17 @@ HEADERS += \
     DataControl/CProjectDB.h \
     DataControl/CUserInfoDB.h \
     DataControl/ParamsConfiguration.h \
+    HistoryPage/CHistoryPage.h \
     LoginPage/CLoginInWidget.h \
+    MDWidget/CPageStatusWidget.h \
+    MDWidget/CPageTitleWidget.h \
+    MuItemDelegate.h \
     PublicConfig.h \
     PublicFunction.h \
     PublicWidget.h \
+    SettingPage/CSettingPage.h \
+    StatusPage/CStatusPage.h \
+    TestPage/CTestPage.h \
     mainwindow.h
 
 FORMS += \

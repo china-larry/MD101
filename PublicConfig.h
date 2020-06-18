@@ -1,7 +1,7 @@
 #ifndef PUBLICCONFIG_H
 #define PUBLICCONFIG_H
 #include <QString>
-
+#include <QMetaType>
 //
 const QString gc_strUDiskPath = "/run/media/sda1";//udisk
 const QString gc_strAppName = "MDx101";
@@ -20,5 +20,18 @@ const QString gc_strProjectDB = gc_strDataPath + gc_strProjectDBName;
 const QString gc_strProjectDBConnect = "project_connect";
 const QString gc_strSystemDB = gc_strDataPath + gc_strSystemDBName;
 const QString gc_strSystemDBConnect ="system_connect";
+
+
+
+
+typedef struct {
+    QString iconPath;
+    QString singer;
+    QString songsNb;
+} MuItemData;
+
+Q_DECLARE_METATYPE(MuItemData)
+
+
 
 #endif // PUBLICCONFIG_H

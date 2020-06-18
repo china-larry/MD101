@@ -40,7 +40,7 @@ void CUserInfoDB::InitDataBase()
                                   "PassWord VARCHAR,"
                                   "UserType VARCHAR,"
                                   "CreateTime VARCHAR,"
-                                  "Info VARCHAR)";
+                                  "Remarks VARCHAR)";
 
         //-qDebug() << "cread strCreateTable " << strCreateTable;
         // 创建

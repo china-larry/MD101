@@ -1,6 +1,14 @@
 <RCC>
     <qresource prefix="/qss">
         <file>LoginPage/LoginPage.qss</file>
+        <file>MainPage.qss</file>
     </qresource>
-    <qresource prefix="/image"/>
+    <qresource prefix="/image">
+        <file>images/HotDog.jpg</file>
+        <file>images/li.jpg</file>
+        <file>images/logo.jpg</file>
+        <file>images/PACT.jpg</file>
+        <file>images/yang.jpg</file>
+        <file>images/zhang.jpg</file>
+    </qresource>
 </RCC>
