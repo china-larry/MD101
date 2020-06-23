@@ -14,8 +14,9 @@ public:
     explicit CPageTitleWidget(QWidget *parent = 0);
 
 signals:    
-    void SignalHomeButton();
-    void SignalReturnButton();
+    void SignalStatusButton();
+    void SignalTestButton();
+    void SignalHistoryButton();
 public slots:
 
 private slots:
@@ -28,11 +29,13 @@ private:
     void _InitLayout();
 
 private:
+    QLabel *m_pLogoLabel;
+    QLabel *m_pUserNameImageLabel;
+    QLineEdit *m_pUserNameLineEdit;
 
-    QLabel *m_pUserMapLabel;
-    QLabel *m_pUserNameLabel;
-    QPushButton *m_pMainPageButton;
-    QPushButton *m_pReturnButton;
+    QPushButton *m_pStatusButton;
+    QPushButton *m_pTestButton;
+    QPushButton *m_pHistoryButton;
 
 };
 

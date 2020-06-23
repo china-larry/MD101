@@ -165,6 +165,7 @@ CPasswordWidget::CPasswordWidget(QWidget *parent) : QWidget(parent)
     m_pPasswordHidButton = new QPushButton(this);
     m_pPasswordHidButton->setFixedSize(30, 30);
     m_pPasswordHidButton->setObjectName("m_pPasswordHidButton");
+    m_pPasswordHidButton->setCursor(QCursor(Qt::ArrowCursor));
     SetButtonBackImage(m_pPasswordHidButton, ":/image/ico/login/see.png");
     connect(m_pPasswordHidButton, &QPushButton::clicked,
             this, &CPasswordWidget::_SlotCheckHideButton);
@@ -178,7 +179,6 @@ CPasswordWidget::CPasswordWidget(QWidget *parent) : QWidget(parent)
     m_pPasswordLineEdit->setLayout(pCommonLayout);
 
     m_pLabel->setPixmap(QPixmap(":/image/ico/login/icon_password_pressed.png"));
-
 
     this->_InitLayout();
 }

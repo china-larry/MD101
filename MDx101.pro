@@ -36,6 +36,7 @@ SOURCES += \
     MDControl/COperationUnit.cpp \
     MDWidget/CPageStatusWidget.cpp \
     MDWidget/CPageTitleWidget.cpp \
+    MDWidget/CUserNameShowWidget.cpp \
     MuItemDelegate.cpp \
     PublicConfig.cpp \
     PublicFunction.cpp \
@@ -75,6 +76,7 @@ HEADERS += \
     MDControl/COperationUnit.h \
     MDWidget/CPageStatusWidget.h \
     MDWidget/CPageTitleWidget.h \
+    MDWidget/CUserNameShowWidget.h \
     MuItemDelegate.h \
     PublicConfig.h \
     PublicFunction.h \

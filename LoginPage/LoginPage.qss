@@ -98,7 +98,7 @@ QComboBox QAbstractItemView
 }
 QComboBox QAbstractItemView::item
 {
-        min-height: 30px;/*下拉列表的行高，也可以看做行距*/
+        min-height: 60px;/*下拉列表的行高，也可以看做行距*/
         color: #000; /* text color */
         font-family: "Arial";
         font-size: 22px;

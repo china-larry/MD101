@@ -19,6 +19,9 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     void resizeEvent(QResizeEvent *);
+    void mousePressEvent(QMouseEvent *event);
+    void mouseReleaseEvent(QMouseEvent *event);
+    void mouseMoveEvent(QMouseEvent *event);
 
 public slots:
     void SlotShwoMenu();
@@ -48,6 +51,11 @@ private:
 
     QListView *m_pQListView;
     bool m_bShowMenu;
+    //
+    bool m_bLeftButtonCheck;
+    QPoint m_qPressPoint;
+    QPoint m_qMovePoint;
+
 
 };
 #endif // MAINWINDOW_H

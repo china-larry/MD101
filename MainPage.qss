@@ -1,0 +1,50 @@
+QLineEdit#m_pUserNameLineEdit
+{
+    background: rgb(128, 146, 192);
+    border: 0px solid #529BFF;
+    border-radius: 25px;
+    font-family:"Arial";
+    font-size: 23px;
+    height: 50px;
+    width: 250px;
+    padding-left:50px;
+    color:#ffffff
+}
+QPushButton#m_pStatusButton
+{
+    font-size:25px;
+    font-family:Arial;
+    color:#D7DFE3;
+    qproperty-iconSize:50px 50px;
+    qproperty-icon: url(:/image/ico/main/fo.png) off, url(:/image/ico/main/go.png) on;
+}
+QPushButton#m_pTestButton
+{
+    font-size:25px;
+    font-family:Arial;
+    color:#D7DFE3;
+    qproperty-iconSize:50px 50px;
+    qproperty-icon: url(:/image/ico/main/fo.png) off, url(:/image/ico/main/go.png) on;
+}
+
+QPushButton#m_pHistoryButton
+{
+    font-size:25px;
+    font-family:Arial;
+    color:#D7DFE3;
+    qproperty-iconSize:50px 50px;
+    qproperty-icon: url(:/image/ico/main/fo.png) off, url(:/image/ico/main/go.png) on;
+}
+
+/*QPushButton:hover{
+        background: rgb(85, 85, 85);
+}*/
+
+QPushButton:pressed{
+        background: rgb(13, 191, 239);
+}
+
+/*QPushButton:checked{
+        background: green;
+}*/
+

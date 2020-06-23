@@ -50,6 +50,46 @@ CLoginInWidget::CLoginInWidget(QWidget *parent) : QWidget(parent)
     _ReadUserName();
 }
 
+void CLoginInWidget::mousePressEvent(QMouseEvent *event)
+{
+    if( event->button() == Qt::LeftButton)
+    {
+        m_qPressPoint = event->globalPos();
+        m_bLeftButtonCheck = true;
+    }
+    event->ignore();//表示继续向下传递事件，其他的控件还可以去获取
+}
+
+void CLoginInWidget::mouseReleaseEvent(QMouseEvent *event)
+{
+    if( event->button() == Qt::LeftButton )
+    {
+        m_bLeftButtonCheck = false;
+    }
+    event->ignore();
+}
+
+void CLoginInWidget::mouseMoveEvent(QMouseEvent *event)
+{
+    if( m_bLeftButtonCheck )
+    {
+        m_qMovePoint = event->globalPos();
+        // //-qDebug() << "move point " << m_qMovePoint << m_qPressPoint;
+        // 防止闪现
+        QPoint qMovePointTemp = m_qMovePoint - m_qPressPoint;
+        if(qMovePointTemp.x() > 30)
+        {
+            qMovePointTemp.setX(30);
+        }
+        if(qMovePointTemp.y() > 30)
+        {
+            qMovePointTemp.setY(30);
+        }
+        this->move( this->pos() + qMovePointTemp);
+        m_qPressPoint = m_qMovePoint;
+    }
+    event->ignore();
+}
 void CLoginInWidget::_SlotCheckMinButton()
 {
     this->showMinimized();
