@@ -16,7 +16,7 @@ void MuItemDelegate::paint(QPainter *painter, const QStyleOptionViewItem &option
         QVariant var = index.data(Qt::UserRole+1);
         MuItemData itemData = var.value<MuItemData>();
 
-        // item 矩形区域
+        // item 矩形区域// dd
         QRectF rect;
         rect.setX(option.rect.x());
         rect.setY(option.rect.y());

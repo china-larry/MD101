@@ -169,4 +169,11 @@ void WaitSleep(qint32 iMsec);
   */
 bool CopyFileDir(const QString &kstrSrcDir, const QString &kstrDestDir, bool bCoverFileIfExist);
 //
+
+
+int GetByte2Int(char *pByte);
+
+quint16 GetSmallByte(quint16 qDate);
+
+//
 #endif // PUBLICFUNCTION_H

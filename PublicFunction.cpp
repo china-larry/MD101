@@ -799,4 +799,26 @@ bool CopyFileDir(const QString &kstrSrcDir, const QString &kstrDestDir, bool bCo
 }
 
 
+int GetByte2Int(char *pByte)
+{
+    quint16 quBigByte = *((quint8*)pByte);
+    pByte++;
+    quint16 quSmallByte = *((quint8*)pByte);
+    int iNumber = (quSmallByte << 8) | quBigByte;
+    return iNumber;
+}
+quint16 GetSmallByte(quint16 qDate)
+{
+    char *pByte = (char*)&qDate;
+
+    quint16 quSmallByte = *((quint8*)pByte);
+    pByte++;
+    quint16 quBigByte = *((quint8*)pByte);
+    int iNumber = (quSmallByte << 8) | quBigByte;
+
+    qDebug() << "date " << qDate << iNumber;
+
+    return iNumber;
+
+}
 

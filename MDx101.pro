@@ -31,10 +31,26 @@ SOURCES += \
     LoginPage/CLoginInWidget.cpp \
     MDWidget/CPageStatusWidget.cpp \
     MDWidget/CPageTitleWidget.cpp \
+    MDxControl/CAnalyzeCanMsgThread.cpp \
+    MDxControl/CCanBusDeviceThread.cpp \
+    MDxControl/CMqtt2CanThread.cpp \
+    MDxControl/COperationUnit.cpp \
     MuItemDelegate.cpp \
     PublicConfig.cpp \
     PublicFunction.cpp \
     PublicWidget.cpp \
+    QtMqtt/qmqttauthenticationproperties.cpp \
+    QtMqtt/qmqttclient.cpp \
+    QtMqtt/qmqttconnection.cpp \
+    QtMqtt/qmqttconnectionproperties.cpp \
+    QtMqtt/qmqttcontrolpacket.cpp \
+    QtMqtt/qmqttmessage.cpp \
+    QtMqtt/qmqttpublishproperties.cpp \
+    QtMqtt/qmqttsubscription.cpp \
+    QtMqtt/qmqttsubscriptionproperties.cpp \
+    QtMqtt/qmqtttopicfilter.cpp \
+    QtMqtt/qmqtttopicname.cpp \
+    QtMqtt/qmqtttype.cpp \
     SettingPage/CSettingPage.cpp \
     StatusPage/CStatusPage.cpp \
     TestPage/CTestPage.cpp \
@@ -53,10 +69,32 @@ HEADERS += \
     LoginPage/CLoginInWidget.h \
     MDWidget/CPageStatusWidget.h \
     MDWidget/CPageTitleWidget.h \
+    MDxControl/CAnalyzeCanMsgThread.h \
+    MDxControl/CCanBusDeviceThread.h \
+    MDxControl/CMqtt2CanThread.h \
+    MDxControl/COperationUnit.h \
     MuItemDelegate.h \
     PublicConfig.h \
     PublicFunction.h \
     PublicWidget.h \
+    QtMqtt/qmqttauthenticationproperties.h \
+    QtMqtt/qmqttclient.h \
+    QtMqtt/qmqttclient_p.h \
+    QtMqtt/qmqttconnection_p.h \
+    QtMqtt/qmqttconnectionproperties.h \
+    QtMqtt/qmqttconnectionproperties_p.h \
+    QtMqtt/qmqttcontrolpacket_p.h \
+    QtMqtt/qmqttglobal.h \
+    QtMqtt/qmqttmessage.h \
+    QtMqtt/qmqttmessage_p.h \
+    QtMqtt/qmqttpublishproperties.h \
+    QtMqtt/qmqttpublishproperties_p.h \
+    QtMqtt/qmqttsubscription.h \
+    QtMqtt/qmqttsubscription_p.h \
+    QtMqtt/qmqttsubscriptionproperties.h \
+    QtMqtt/qmqtttopicfilter.h \
+    QtMqtt/qmqtttopicname.h \
+    QtMqtt/qmqtttype.h \
     SettingPage/CSettingPage.h \
     StatusPage/CStatusPage.h \
     TestPage/CTestPage.h \

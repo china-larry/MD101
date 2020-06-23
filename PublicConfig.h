@@ -23,6 +23,30 @@ const QString gc_strSystemDBConnect ="system_connect";
 
 
 
+static const int gk_iReSendTimes = 3;// 重发次数
+static const int gk_iWaitMsecs = 1000;// 重发等待时间间隔
+struct SCanBusDeviceStruct
+{
+    QString strPlugin;// 接口类型
+    QString strInterfaceName;// 接口名称
+    qint32 iFrameId;// CAN总线标识符
+    qint32 iBitRate;// 波特率
+};
+
+struct SCanBusDataStruct
+{
+    quint8 quCmdID;
+    quint8 quObjectID;
+    quint8 quErrorID;
+    quint8 quFormat;
+    QByteArray qbPayload;
+};
+
+struct SMqttMsgStruct
+{
+    QString strTopic;
+    QString strMessage;
+};
 
 typedef struct {
     QString iconPath;
