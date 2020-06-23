@@ -2,7 +2,10 @@
 #include "ui_mainwindow.h"
 #include <QStandardItemModel>
 #include <QDebug>
-
+#include "DataControl/CUserInfoDB.h"
+#include "DataControl/CHistoryDB.h"
+#include "DataControl/CLogDB.h"
+#include "DataControl/CProjectDB.h"
 #include "PublicFunction.h"
 #include "MuItemDelegate.h"
 
@@ -34,11 +37,30 @@ MainWindow::MainWindow(QWidget *parent)
     m_kiTitleHeight = 80;// title高度
     m_kiStatusBarHeight = 70;// 状态栏高度
     m_bShowMenu = false;
+
+    //
+    CUserInfoDB::GetInstance()->InitDataBase();
+    CHistoryDB::GetInstance()->InitDataBase();
+    CLogDB::GetInstance()->InitDataBase();
+    CProjectDB::GetInstance()->InitDataBase();
+    //
+    m_pCLoginInWidget = new CLoginInWidget;
+    QObject::connect(m_pCLoginInWidget, &CLoginInWidget::SigShowMainWindow, this, &MainWindow::SlotReceiveLogin);
+    m_pCLoginInWidget->show();
+
+    //
     _InitWidget();
+
+
 }
 
 MainWindow::~MainWindow()
 {
+    if(m_pCLoginInWidget != NULL)
+    {
+        delete m_pCLoginInWidget;
+    }
+
     delete ui;
 }
 void MainWindow::resizeEvent(QResizeEvent *)
@@ -70,6 +92,11 @@ void MainWindow::SlotShwoMenu()
     {
         m_pQListView->hide();
     }
+}
+
+void MainWindow::SlotReceiveLogin(int iUserPower, QString strUserName)
+{
+    this->show();
 }
 
 void MainWindow::_SlotMenuChanged(QModelIndex index)

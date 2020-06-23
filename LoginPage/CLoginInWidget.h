@@ -18,7 +18,7 @@
 #include <QLineEdit>
 #include <QPushButton>
 #include <QKeyEvent>
-#include "CommonDataWidget/CLabelCommoBoxWidget.h"
+#include "CUserNameCommonBox.h"
 class CLoginInWidget : public QWidget
 {
     Q_OBJECT
@@ -28,7 +28,6 @@ public:
 private slots:
     void _SlotCheckMinButton();
     void _SlotCheckCloseButton();
-    void _SlotCheckHideButton();
     void _SlotCheckLoginButton();
 signals:
     void SigShowMainWindow(int iUserPower, QString strUserName);// 显示主窗口
@@ -46,12 +45,11 @@ private:
 private:
 //    QLabel *m_pLoginLabel;
     // user
-    CLabelCommoBoxEditWidget *m_pUserNameWidget;
+    CUserNameCommonBox *m_pUserNameWidget;
     // password
-    QLabel *m_pPasswordLabel;
-    QLineEdit *m_pPasswordLineEdit;
+    CPasswordWidget *m_pPasswordWidget;
     QPushButton *m_pPasswordHidButton;
-    bool m_bSeePassWord;// false不可见，true可见
+
     //
     QPushButton *m_pLoginButton;
     // 用户数据库

@@ -5,8 +5,8 @@
 //
 const QString gc_strUDiskPath = "/run/media/sda1";//udisk
 const QString gc_strAppName = "MDx101";
-const QString gc_strAppArmPath = "/home/root/";
-const QString gc_strDataPath = "/home/root/db/";
+const QString gc_strAppArmPath = "/home/twdz/Work_Pro/MDx101/bin/GCC_64bit-Debug/";///home/root/
+const QString gc_strDataPath = "/home/twdz/Work_Pro/MDx101/bin/GCC_64bit-Debug/db/";//// /home/root/db/
 const QString gc_strAppReleaseNumber = "V 1.0.1";
 const QString gc_strAppFullNumber = "V 1.0.1";
 const QString gc_strFirmewareNumber = "V 1.0.1";

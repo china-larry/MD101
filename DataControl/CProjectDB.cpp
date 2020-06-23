@@ -28,7 +28,9 @@ CProjectDB *CProjectDB::GetInstance()
 
 void CProjectDB::InitDataBase()
 {
-
+    _InitCardInfoDB();
+    _InitSampleInfoDB();
+    _InitPersonInfoDB();
 }
 
 void CProjectDB::_InitCardInfoDB()

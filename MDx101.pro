@@ -29,12 +29,13 @@ SOURCES += \
     DataControl/ParamsConfiguration.cpp \
     HistoryPage/CHistoryPage.cpp \
     LoginPage/CLoginInWidget.cpp \
+    LoginPage/CUserNameCommonBox.cpp \
+    MDControl/CAnalyzeCanMsgThread.cpp \
+    MDControl/CCanBusDeviceThread.cpp \
+    MDControl/CMqtt2CanThread.cpp \
+    MDControl/COperationUnit.cpp \
     MDWidget/CPageStatusWidget.cpp \
     MDWidget/CPageTitleWidget.cpp \
-    MDxControl/CAnalyzeCanMsgThread.cpp \
-    MDxControl/CCanBusDeviceThread.cpp \
-    MDxControl/CMqtt2CanThread.cpp \
-    MDxControl/COperationUnit.cpp \
     MuItemDelegate.cpp \
     PublicConfig.cpp \
     PublicFunction.cpp \
@@ -67,12 +68,13 @@ HEADERS += \
     DataControl/ParamsConfiguration.h \
     HistoryPage/CHistoryPage.h \
     LoginPage/CLoginInWidget.h \
+    LoginPage/CUserNameCommonBox.h \
+    MDControl/CAnalyzeCanMsgThread.h \
+    MDControl/CCanBusDeviceThread.h \
+    MDControl/CMqtt2CanThread.h \
+    MDControl/COperationUnit.h \
     MDWidget/CPageStatusWidget.h \
     MDWidget/CPageTitleWidget.h \
-    MDxControl/CAnalyzeCanMsgThread.h \
-    MDxControl/CCanBusDeviceThread.h \
-    MDxControl/CMqtt2CanThread.h \
-    MDxControl/COperationUnit.h \
     MuItemDelegate.h \
     PublicConfig.h \
     PublicFunction.h \

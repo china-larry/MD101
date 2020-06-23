@@ -25,13 +25,11 @@
 #include "CommonDataWidget/CMessageBox.h"
 CLoginInWidget::CLoginInWidget(QWidget *parent) : QWidget(parent)
 {
-    m_bSeePassWord = false;
-    //
-    this->setFixedSize(1024, 768);
+
+    this->setFixedSize(1280, 800);
     this->setWindowFlags(Qt::CustomizeWindowHint | Qt::FramelessWindowHint);
     // 设置b背景图片
-    SetWidgetBackImage(this, ":/image/ico/login/easy-31.png");
-
+    SetWidgetBackImage(this, ":/image/ico/login/mdx.jpg");
     //
     LoadQss(this, ":/qss/LoginPage/LoginPage.qss");
     //
@@ -40,12 +38,12 @@ CLoginInWidget::CLoginInWidget(QWidget *parent) : QWidget(parent)
     // 数据库
     m_iUserPower = 2;//
     m_strAdminUserName = "admin";
-    m_strAdminPassWord = "2019";
+    m_strAdminPassWord = "123";
     m_strModifyUserName = "super";
-    m_strModifyPassWord = "china";
+    m_strModifyPassWord = "123";
     // 焦点定位
     //m_pUserNameLineEdit->setFocus();
-    m_pPasswordLineEdit->setFocus();
+    m_pPasswordWidget->setFocus();
     //m_pLoginButton->setFocus();
     //
     m_bShowWindows = true;
@@ -66,21 +64,6 @@ void CLoginInWidget::_SlotCheckCloseButton()
     }
 }
 
-void CLoginInWidget::_SlotCheckHideButton()
-{
-    if(m_bSeePassWord)
-    {
-        m_bSeePassWord = false;
-        SetButtonBackImage(m_pPasswordHidButton, ":/image/ico/login/no_see.png");// 默认不可见
-        m_pPasswordLineEdit->setEchoMode(QLineEdit::Password);
-    }
-    else
-    {
-        m_bSeePassWord = true;
-        SetButtonBackImage(m_pPasswordHidButton, ":/image/ico/login/see.png");// 默认不可见
-        m_pPasswordLineEdit->setEchoMode(QLineEdit::Normal);
-    }
-}
 
 void CLoginInWidget::_SlotCheckLoginButton()
 {
@@ -132,21 +115,15 @@ void CLoginInWidget::_InitWidget()
             strAllUserNameList.push_back(strDataListTmp[1]);
         }
     }
-    m_pUserNameWidget = new CLabelCommoBoxEditWidget(tr("User name"), strAllUserNameList, this);
+    m_pUserNameWidget = new CUserNameCommonBox(strAllUserNameList, this);
     // pass
-    m_pPasswordLabel = new QLabel("Password:  ", this);
    // m_pPasswordLabel->setObjectName("m_pUserNameLabel");
-    m_pPasswordLineEdit = new QLineEdit(this);
-    m_pPasswordLineEdit->setEchoMode(QLineEdit::Password);
-    //m_pPasswordLineEdit->setFixedSize(280, 45);
-    connect(m_pPasswordLineEdit, &QLineEdit::textChanged, this, &CLoginInWidget::_SlotPasswordChange);
-    m_pPasswordHidButton = new QPushButton("", this);
-    m_pPasswordHidButton->setFixedSize(60, 35);
-    SetButtonBackImage(m_pPasswordHidButton, ":/image/ico/login/no_see.png");// 默认不可见
-    m_pPasswordHidButton->setObjectName("m_pPasswordHidButton");
-    connect(m_pPasswordHidButton, &QPushButton::clicked, this, &CLoginInWidget::_SlotCheckHideButton);
-    //
-    m_pLoginButton = new QPushButton("Login", this);
+    m_pPasswordWidget = new CPasswordWidget(this);
+//    m_pPasswordLineEdit->setEchoMode(QLineEdit::Password);
+    m_pPasswordWidget->SetFixSize(390, 60);
+  //  connect(m_pPasswordLineEdit, &QLineEdit::textChanged, this, &CLoginInWidget::_SlotPasswordChange);
+
+    m_pLoginButton = new QPushButton(tr("登 录"), this);
     m_pLoginButton->setObjectName("m_pLoginButton");
 
     connect(m_pLoginButton, SIGNAL(clicked(bool)), this, SLOT(_SlotCheckLoginButton()));
@@ -158,48 +135,33 @@ void CLoginInWidget::_InitWidget()
   */
 void CLoginInWidget::_InitLayout()
 {
-    int iLeftSize = 625;
     // username
     QHBoxLayout *pUserNameLableHLayout = new QHBoxLayout;
-    pUserNameLableHLayout->addSpacing(iLeftSize);
+    pUserNameLableHLayout->addStretch(1);
     pUserNameLableHLayout->addWidget(m_pUserNameWidget);
     pUserNameLableHLayout->addStretch(1);
     //
-//    QHBoxLayout *pUserNameLineHLayout = new QHBoxLayout;
-//    pUserNameLineHLayout->addSpacing(iLeftSize);
-//    pUserNameLineHLayout->addWidget(m_pUserNameLineEdit);
-//    pUserNameLineHLayout->addStretch(1);
     // password
-    QHBoxLayout *pPasswordLableHLayout = new QHBoxLayout;
-    pPasswordLableHLayout->addSpacing(iLeftSize);
-    pPasswordLableHLayout->addWidget(m_pPasswordLabel);
-    pPasswordLableHLayout->addStretch(1);
     //
     QHBoxLayout *pPasswordLineHLayout = new QHBoxLayout;
-    pPasswordLineHLayout->addSpacing(iLeftSize);
-    pPasswordLineHLayout->addWidget(m_pPasswordLineEdit);
-    pPasswordLineHLayout->addSpacing(10);
-    pPasswordLineHLayout->addWidget(m_pPasswordHidButton);
+    pPasswordLineHLayout->addStretch(1);
+    pPasswordLineHLayout->addWidget(m_pPasswordWidget);
     pPasswordLineHLayout->addStretch(1);
     //
     //
     QHBoxLayout *pLoadInHLayout = new QHBoxLayout;
-    pLoadInHLayout->addSpacing(iLeftSize+60);
+    pLoadInHLayout->addStretch(1);
     pLoadInHLayout->addWidget(m_pLoginButton);
     pLoadInHLayout->addStretch(1);
     //
 
     QVBoxLayout *pVLayout = new QVBoxLayout;
     pVLayout->setMargin(0);
-    pVLayout->addStretch(1);
+    pVLayout->addSpacing(282);
     pVLayout->addLayout(pUserNameLableHLayout);
-    pVLayout->addSpacing(10);
-//    pVLayout->addLayout(pUserNameLineHLayout);
-//    pVLayout->addSpacing(10);
-    pVLayout->addLayout(pPasswordLableHLayout);
-    pVLayout->addSpacing(10);
+    pVLayout->addSpacing(14);
     pVLayout->addLayout(pPasswordLineHLayout);
-    pVLayout->addSpacing(50);
+    pVLayout->addSpacing(55);
     pVLayout->addLayout(pLoadInHLayout);
     pVLayout->addStretch(1);
     //
@@ -214,7 +176,7 @@ int CLoginInWidget::_CheckUserPower()
 {
     qDebug() << __FUNCTION__ << __LINE__;
     QString strUserName = m_pUserNameWidget->GetCurrentSelectText();
-    QString strPassWord = m_pPasswordLineEdit->text();
+    QString strPassWord = m_pPasswordWidget->GetCurrentText();
     QString strDataPassWord = "";// 数据库中存储Password
     if(strUserName.isEmpty())
     {
@@ -317,7 +279,7 @@ void CLoginInWidget::_ReadUserName()
     }
     else
     {
-        ShowCritical(NULL, tr("Error"), tr("Critical Data lost"));
-        qDebug() << "reda MotorLight config error";
+        //ShowCritical(NULL, tr("Error"), tr("Critical Data lost"));
+        //qDebug() << "reda MotorLight config error";
     }
 }

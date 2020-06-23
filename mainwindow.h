@@ -6,7 +6,7 @@
 
 #include "MDWidget/CPageStatusWidget.h"
 #include "MDWidget/CPageTitleWidget.h"
-
+#include "LoginPage/CLoginInWidget.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -22,6 +22,8 @@ public:
 
 public slots:
     void SlotShwoMenu();
+    // 标题栏
+   void SlotReceiveLogin(int iUserPower, QString strUserName);// 登陆界面跳转
 private slots:
     void _SlotMenuChanged(QModelIndex index);
 private:
@@ -31,6 +33,8 @@ private:
     Ui::MainWindow *ui;
     QVBoxLayout *m_pMainLayout;
     QWidget *m_pCentralWidget;// 布局
+    //
+    CLoginInWidget *m_pCLoginInWidget;
 
     // 多标签 切换控件
     QStackedWidget *m_pStackedWidget;

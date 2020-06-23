@@ -10,5 +10,11 @@
         <file>images/PACT.jpg</file>
         <file>images/yang.jpg</file>
         <file>images/zhang.jpg</file>
+        <file>ico/login/commod.png</file>
+        <file>ico/login/icon_userClicked.png</file>
+        <file>ico/login/icon_password_pressed.png</file>
+        <file>ico/login/no_see.png</file>
+        <file>ico/login/see.png</file>
+        <file>ico/login/mdx.jpg</file>
     </qresource>
 </RCC>

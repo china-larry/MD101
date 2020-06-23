@@ -1,13 +1,13 @@
 QPushButton#m_pLoginButton
 {
     color : rgb(255, 255, 255);
-    background-color: rgb(30, 141, 255);
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 1, y2: 0,
+            stop: 0 #04BDFE, stop: 1 #4481EB);
     font-family:"Arial";
-    font-size: 20px;
-    font-weight : bold;
-    border-radius: 3px;
-    height: 55;
-    width: 180;
+    font-size: 25px;
+    border-radius: 5px;
+    height: 60;
+    width: 390;
 }
 QPushButton#m_pPasswordHidButton
 {
@@ -42,19 +42,30 @@ QLabel
     font-size: 18px;
     color : rgb(20, 20, 20);
 }
-QLineEdit
+QLineEdit#m_pPasswordLineEdit
 {
     border: 2px solid #529BFF;
     border-radius: 5px;
     font-family:"Arial";
     font-size: 23px;
-    height: 55px;
-    width: 280px;
+    height: 60px;
+    width: 390px;
+    padding-left:50px;
+}
+QLineEdit:focus#m_pPasswordLineEdit
+{
+    border: 2px solid #529BFF;
+    border-radius: 5px;
+    font-family:"Arial";
+    font-size: 23px;
+    height: 60px;
+    width: 390px;
+    padding-left:50px;
 }
 QComboBox
 {
-    height: 55px;
-    width: 240px;
+    height: 60px;
+    width: 345px;
     color: #000; /* text color */
     font-family: "Arial";
     font-size: 22px;
@@ -75,7 +86,7 @@ QComboBox::drop-down {
 }
 
 QComboBox::down-arrow {
-    image: url(:/image/ico/test/commod.png);
+    image: url(:/image/ico/login/commod.png);
 }
 QComboBox QAbstractItemView
 {
