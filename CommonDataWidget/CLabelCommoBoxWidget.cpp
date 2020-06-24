@@ -165,8 +165,9 @@ void CLabelCommoBoxWidget::_InitLayout()
     QHBoxLayout *pLayout = new QHBoxLayout;
     pLayout->setMargin(0);
     pLayout->addWidget(m_pLabel);
-    pLayout->addSpacing(9);
+    pLayout->addStretch(1);
     pLayout->addWidget(m_pComboBox);
+    pLayout->addSpacing(9);
     this->setLayout(pLayout);
 }
 
@@ -231,19 +232,6 @@ QString CLabelCommoBoxEditWidget::GetCurrentSelectText()
 int CLabelCommoBoxEditWidget::GetCurrentSelectIndex()
 {
     return m_pComboBox->currentIndex();
-}
-
-void CLabelCommoBoxEditWidget::SetCupType(QStringList strCupList)
-{
-    if(m_pComboBox != NULL)
-    {
-        m_pComboBox->clear();
-        if(strCupList.count() > 0)
-        {
-            m_pComboBox->addItems(strCupList);
-            m_pComboBox->setCurrentIndex(0);
-        }
-    }
 }
 
 void CLabelCommoBoxEditWidget::SetCurrentIndex(int iIndex)

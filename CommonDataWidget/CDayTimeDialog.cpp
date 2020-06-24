@@ -1,5 +1,6 @@
 #include "CDayTimeDialog.h"
 #include <QBoxLayout>
+#include <QMouseEvent>
 CTimeObject::CTimeObject(QWidget *parent)
 : QWidget(parent)
 {

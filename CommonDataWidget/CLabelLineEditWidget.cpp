@@ -25,7 +25,7 @@ CLabelLineEditWidget::CLabelLineEditWidget(QString strLabel, QString strLineText
      m_strLineText(strLineText)
 {
     m_pLabel = new QLabel(strLabel, this);
-    m_pLineEdit = new CVLineEdit(strLineText, this);
+    m_pLineEdit = new QLineEdit(strLineText, this);
     this->_InitLayout();
 }
 
@@ -80,7 +80,7 @@ void CLabelLineEditWidget::SetLineValidator(QString ValidatorType)
     m_pLineEdit->setValidator( validator );
 }
 
-CVLineEdit *CLabelLineEditWidget::GetLineEdit()
+QLineEdit *CLabelLineEditWidget::GetLineEdit()
 {
     return m_pLineEdit;
 }
@@ -101,7 +101,7 @@ CHLabelLineEditWidget::CHLabelLineEditWidget(QString strLabel, QString strLineTe
     if(parent != NULL)
     {
         m_pLabel = new QLabel(strLabel, this);
-        m_pLineEdit = new CVLineEdit(strLineText, this);
+        m_pLineEdit = new QLineEdit(strLineText, this);
         this->_InitLayout();
     }
 }
@@ -112,9 +112,9 @@ void CHLabelLineEditWidget::_InitLayout()
     QHBoxLayout *pLayout = new QHBoxLayout;
     pLayout->setMargin(0);
     pLayout->addWidget(m_pLabel);
-    pLayout->addSpacing(9);
-    pLayout->addWidget(m_pLineEdit);
     pLayout->addStretch(1);
+    pLayout->addWidget(m_pLineEdit);
+    pLayout->addSpacing(9);
     this->setLayout(pLayout);
 }
 
@@ -158,5 +158,98 @@ void CLabelMarkWidget::_InitLayout()
     QHBoxLayout *pLayout = new QHBoxLayout;
     pLayout->addWidget(m_pLabel);
     pLayout->addWidget(m_pNameLabel);
+    this->setLayout(pLayout);
+}
+
+CLabelLineCommoBoxWidget::CLabelLineCommoBoxWidget(QWidget *parent)
+{
+
+}
+
+CLabelLineCommoBoxWidget::CLabelLineCommoBoxWidget(QString strLabel, QString strLineText, QStringList strCommoList, QWidget *parent)
+{
+    m_pLabel = new QLabel(strLabel, this);
+    m_pLineEdit = new QLineEdit(strLineText, this);
+    m_pComboBox = new QComboBox(this);
+    m_pComboBox->addItems(strCommoList);
+    this->_InitLayout();
+}
+
+QString CLabelLineCommoBoxWidget::GetLineText()
+{
+    m_strLineText = m_pLineEdit->text();
+    return m_strLineText;
+}
+
+void CLabelLineCommoBoxWidget::SetLineText(QString strLineText)
+{
+    m_strLineText = strLineText;
+    m_pLineEdit->setText(m_strLineText);
+    this->update();
+}
+
+void CLabelLineCommoBoxWidget::SetLineTextEnable(bool bEnable)
+{
+    m_pLineEdit->setEnabled(bEnable);
+    if(!bEnable)
+    {
+        m_pLineEdit->setStyleSheet("background-color:rgba(200,200,200,200)");
+    }
+}
+
+void CLabelLineCommoBoxWidget::SetLineEditFixSize(int iWidth, int iHeight)
+{
+    m_pLineEdit->setFixedSize(iWidth, iHeight);
+}
+
+void CLabelLineCommoBoxWidget::SetLabelObjectName(QString strObjectName)
+{
+    m_pLabel->setObjectName(strObjectName);
+}
+
+void CLabelLineCommoBoxWidget::SetLineEditObjectName(QString strObjectName)
+{
+    m_pLineEdit->setObjectName(strObjectName);
+}
+
+void CLabelLineCommoBoxWidget::SetCommoBoxObjectName(QString strObjectName)
+{
+    m_pComboBox->setObjectName(strObjectName);
+}
+
+void CLabelLineCommoBoxWidget::SetLineValidator(int iMin, int iMax)
+{
+    m_pLineEdit->setValidator(new QIntValidator(iMin, iMax, this));
+}
+
+void CLabelLineCommoBoxWidget::SetLineValidator(QString ValidatorType)
+{
+    //只能输入汉字：^[\u4e00-\u9fa5]{0,}$
+    //不能输入汉字：^[^\u4e00-\u9fa5]{0,}$
+    QRegExp regx(ValidatorType);
+    QValidator *validator = new QRegExpValidator(regx, m_pLineEdit );
+    m_pLineEdit->setValidator( validator );
+}
+
+int CLabelLineCommoBoxWidget::GetCurrentIndex()
+{
+    return m_pComboBox->currentIndex();
+}
+
+void CLabelLineCommoBoxWidget::SetCurrentIndex(int iIndex)
+{
+    m_pComboBox->setCurrentIndex(iIndex);
+}
+
+void CLabelLineCommoBoxWidget::_InitLayout()
+{
+    QHBoxLayout *pLayout = new QHBoxLayout;
+    pLayout->setMargin(0);
+    pLayout->addWidget(m_pLabel);
+    pLayout->addStretch(1);
+    pLayout->addWidget(m_pLineEdit);
+    pLayout->addSpacing(5);
+    pLayout->addWidget(m_pComboBox);
+    pLayout->addSpacing(9);
     this->setLayout(pLayout);
 }

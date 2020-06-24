@@ -7,9 +7,19 @@
 #include "MDWidget/CPageStatusWidget.h"
 #include "MDWidget/CPageTitleWidget.h"
 #include "LoginPage/CLoginInWidget.h"
+#include "TestPage/CTestPage.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
+
+
+enum
+{
+    STATUS_PAGE = 0, // 状态
+    TEST_PAGE = 1, // 测试
+    HISTORY_PAGE = 2, // 历史
+};
+
 
 class MainWindow : public QMainWindow
 {
@@ -44,6 +54,8 @@ private:
 
     CPageTitleWidget *m_pCPageTitleWidget;
     CPageStatusWidget *m_pCPageStatusWidget;
+    //
+    CTestPage *m_pCTestPage;
 
     int m_kiTitleHeight;// 标题栏高度
     int m_kiStatusBarHeight;

@@ -1,9 +1,12 @@
 #ifndef CDAYTIMEDIALOG_H
 #define CDAYTIMEDIALOG_H
 #include <QCalendarWidget>
+#include <QLineEdit>
+#include <QDialog>
+
 #include "CommonDataWidget/CLabelLineEditWidget.h"
 #include "PublicFunction.h"
-#include <QLineEdit>
+
 // 基类，年 + 数字 - 四个控件
 class CTimeObject : public QWidget
 {

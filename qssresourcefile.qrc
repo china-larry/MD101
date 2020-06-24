@@ -2,6 +2,7 @@
     <qresource prefix="/qss">
         <file>LoginPage/LoginPage.qss</file>
         <file>MainPage.qss</file>
+        <file>TestPage/TestPage.qss</file>
     </qresource>
     <qresource prefix="/image">
         <file>images/HotDog.jpg</file>
@@ -21,5 +22,6 @@
         <file>ico/main/logo.png</file>
         <file>ico/login/icon_password_normal.png</file>
         <file>ico/login/icon_userNormal.png</file>
+        <file>ico/main/label_mark.png</file>
     </qresource>
 </RCC>

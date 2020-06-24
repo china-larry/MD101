@@ -96,7 +96,6 @@ public slots:
 public:
     QString GetCurrentSelectText();
     int GetCurrentSelectIndex();
-    void SetCupType(QStringList strCupList);
     void SetCurrentIndex(int iIndex);
     void SetCurrentText(QString strCupType);
     void AddItemText(QString strText);

@@ -1,0 +1,185 @@
+QLabel
+{
+    font-family:"Arial";
+    font-size: 23px;
+    color:#000;
+/*    font-weight:bold;*/
+}
+QLabel#m_pNameLabel
+{
+    font-family:"Arial";
+    font-size: 23px;
+    color:#1574C8;
+/*    font-weight:bold;*/
+}
+
+QWidget#m_pCShowImageWidget
+{
+    background-color:#FFF;
+    border-radius:10px;
+}
+QWidget#m_pCCardInfoWidget
+{
+    background-color:#FFF;
+    border: 3px dashed #CDDFED;
+    border-radius:10px;
+}
+QWidget#m_pCSampleInfoWidget
+{
+    background-color:#FFF;
+    border: 3px dashed #CDDFED;
+    border-radius:10px;
+}
+
+QLabel#m_pTitleLabel
+{
+    font-family:"Arial";
+    font-size: 25px;
+    color:#000;
+/*    font-weight:bold;*/
+}
+QLabel#m_pShowVedioLabel
+{
+    background-color: #CEDFEF;
+    border: 0px solid #529BFF;
+    border-radius: 5px;
+}
+QLabel#m_pInfoLabel
+{
+    font-family:"Arial";
+    font-size: 23px;
+    color:#fff;
+    border: 0px solid #529BFF;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #1BBC9B;
+}
+QLineEdit
+{
+    min-height: 50px;
+    min-width: 230px;
+    max-width: 230px;
+    color: #000; /* text color */
+    font-family: "Arial";
+    font-size: 18px;
+    border: 2px solid #DADEE7;
+    border-radius:10px;
+    padding: 0 0px;
+}
+QLineEdit#m_pAgeLineWidget
+{
+    min-height: 50px;
+    min-width: 90px;
+    max-width: 90px;
+    background: rgb(128, 146, 192);
+    border: 0px solid #529BFF;
+    border-radius: 5px;
+    font-family:"Arial";
+    font-size: 23px;
+    color:#ffffff
+}
+
+QPushButton#m_pNextStepButton
+{
+    background: #248CEB;
+    border-radius: 10px;
+    border: 0px solid #529BFF;
+    font-size:20px;
+    font-family:Arial;
+    color:#FFF;
+    qproperty-iconSize:50px 50px;
+    qproperty-icon: url(:/image/ico/main/fo.png) off, url(:/image/ico/main/go.png) on;
+}
+QPushButton#m_pStopTestButton
+{
+    background: #248CEB;
+    border-radius: 10px;
+    border: 0px solid #529BFF;
+    font-size:20px;
+    font-family:Arial;
+    color:#FFF;
+    qproperty-iconSize:50px 50px;
+    qproperty-icon: url(:/image/ico/main/fo.png) off, url(:/image/ico/main/go.png) on;
+}
+QPushButton:pressed#m_pNextStepButton
+{
+    border: 0px solid #529BFF;
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #0EBEEF, stop: 1 #349DEE);
+}
+
+
+QPushButton:pressed#m_pStopTestButton
+{
+    border: 0px solid #529BFF;
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #0EBEEF, stop: 1 #349DEE);
+}
+
+/*QPushButton:checked{
+        background: green;
+}*/
+QComboBox#m_pAgeWidget
+{
+    height: 50px;
+    min-width: 128px;
+    max-width: 128px;
+    color: #000; /* text color */
+    font-family: "Arial";
+    font-size: 22px;
+    border: 2px solid #529BFF;
+    border-radius:5px;
+
+}
+QComboBox
+{
+    height: 50px;
+    min-width: 230px;
+    max-width: 230px;
+    color: #000; /* text color */
+    font-family: "Arial";
+    font-size: 22px;
+    border: 2px solid #529BFF;
+    border-radius:5px;
+
+}
+QComboBox::drop-down {
+    subcontrol-origin: padding;
+    subcontrol-position: top right;
+    width: 40px;
+
+    border-left-width: 0px;
+    border-left-color: darkgray;
+    border-left-style: solid; /* just a single line */
+    border-top-right-radius: 3px; /* same radius as the QComboBox */
+    border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+    image: url(:/image/ico/login/commod.png);
+}
+QComboBox QAbstractItemView
+{
+        border: 2px solid darkgray;/*下拉列表的边线的粗细、实虚*/
+        selection-background-color: blue;/*下拉列表选中的行的背景色*/
+        color: #000; /* text color */
+        font-family: "Arial";
+        font-size: 22px;
+}
+QComboBox QAbstractItemView::item
+{
+        min-height: 60px;/*下拉列表的行高，也可以看做行距*/
+        color: #000; /* text color */
+        font-family: "Arial";
+        font-size: 22px;
+}
+/*垂直滚动条整体*/
+QScrollBar:vertical
+{
+    width:25px;
+    background:rgb(30, 141, 255,0%);
+    margin:0px,0px,0px,0px;
+    padding-top:25px;   /*上预留位置*/
+    padding-bottom:25px;    /*下预留位置*/
+}
+

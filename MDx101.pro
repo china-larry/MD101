@@ -20,7 +20,10 @@ OBJECTS_DIR = temp/obj
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    CommonDataWidget/CDayTimeDialog.cpp \
     CommonDataWidget/CLabelCommoBoxWidget.cpp \
+    CommonDataWidget/CLabelDateWidget.cpp \
+    CommonDataWidget/CLabelLineEditWidget.cpp \
     CommonDataWidget/CMessageBox.cpp \
     DataControl/CHistoryDB.cpp \
     DataControl/CLogDB.cpp \
@@ -55,12 +58,18 @@ SOURCES += \
     QtMqtt/qmqtttype.cpp \
     SettingPage/CSettingPage.cpp \
     StatusPage/CStatusPage.cpp \
+    TestPage/CCardInfoWidget.cpp \
+    TestPage/CSampleInfoWidget.cpp \
+    TestPage/CShowImageWidget.cpp \
     TestPage/CTestPage.cpp \
     main.cpp \
     mainwindow.cpp
 
 HEADERS += \
+    CommonDataWidget/CDayTimeDialog.h \
     CommonDataWidget/CLabelCommoBoxWidget.h \
+    CommonDataWidget/CLabelDateWidget.h \
+    CommonDataWidget/CLabelLineEditWidget.h \
     CommonDataWidget/CMessageBox.h \
     DataControl/CHistoryDB.h \
     DataControl/CLogDB.h \
@@ -101,6 +110,9 @@ HEADERS += \
     QtMqtt/qmqtttype.h \
     SettingPage/CSettingPage.h \
     StatusPage/CStatusPage.h \
+    TestPage/CCardInfoWidget.h \
+    TestPage/CSampleInfoWidget.h \
+    TestPage/CShowImageWidget.h \
     TestPage/CTestPage.h \
     mainwindow.h
 

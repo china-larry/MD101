@@ -75,10 +75,10 @@ void CLabelDateWidget::_InitLayout()
 {
     QHBoxLayout *pLayout = new QHBoxLayout;
     pLayout->setMargin(0);
-    pLayout->addStretch(1);
     pLayout->addWidget(m_pLabel);
-    pLayout->addSpacing(10);
+    pLayout->addStretch(1);
     pLayout->addWidget(m_pDateEdit);
+    pLayout->addSpacing(9);
     this->setLayout(pLayout);
 }
 

@@ -26,7 +26,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->setupUi(this);
     this->setWindowFlags(Qt::FramelessWindowHint);
     this->setMinimumSize(1280, 800);
-    SetWidgetBackColor(this, QColor(0xE1, 0xE2, 0xEA));
+    SetWidgetBackColor(this, QColor(0xCC, 0xDE, 0xEE));
 
     QApplication::setApplicationDisplayName(tr("MDx"));
     this->setWindowTitle(tr("MDx"));
@@ -94,7 +94,7 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 
 void MainWindow::mouseReleaseEvent(QMouseEvent *event)
 {
-    if( event->button() == Qt::LeftButton )
+    if( event->button() == Qt::LeftButton)
     {
         m_bLeftButtonCheck = false;
     }
@@ -150,9 +150,13 @@ void MainWindow::_InitWidget()
 {
     // 标题栏
     m_pCPageTitleWidget = new CPageTitleWidget(this);
+    // page
+    m_pCTestPage = new CTestPage(this);
+    m_pCTestPage->setAttribute(Qt::WA_StyledBackground,true);
+    m_pCTestPage->setObjectName("m_pCTestPage");
     // 多标签
     m_pStackedWidget = new QStackedWidget(this);
-    m_pStackedWidget->setStyleSheet("QWidget{background-color:white;border-radius:15px;}");
+//    m_pStackedWidget->setStyleSheet("QWidget{background-color:#00F6Fb;border-radius:15px;}");
     // 状态栏
     m_pCPageStatusWidget = new CPageStatusWidget(this);
     connect(m_pCPageStatusWidget, &CPageStatusWidget::SignalShowMenu,
@@ -177,5 +181,14 @@ void MainWindow::_InitWidget()
     m_pQListView->setModel(pModel);
     connect(m_pQListView, &QListView::clicked,
             this, &MainWindow::_SlotMenuChanged);
+
+
+
+
+
+
+
+    //
+    m_pStackedWidget->addWidget(m_pCTestPage);
 
 }

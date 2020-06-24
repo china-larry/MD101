@@ -1,3 +1,15 @@
+QWidget#m_pCTestPage
+{
+    background-color:#F1F6Fb;
+    border-radius:10px;
+}
+QStackedWidget
+{
+    background-color: #F1F6Fb;
+    color: #BBBBBB;
+    border: 0px solid #529BFF;
+    border-radius: 10px;
+}
 QLineEdit#m_pUserNameLineEdit
 {
     background: rgb(128, 146, 192);
@@ -12,9 +24,10 @@ QLineEdit#m_pUserNameLineEdit
 }
 QPushButton#m_pStatusButton
 {
+    border: 0px solid #529BFF;
     font-size:25px;
     font-family:Arial;
-    color:#D7DFE3;
+    color:#D7DFE3;    
     qproperty-iconSize:50px 50px;
     qproperty-icon: url(:/image/ico/main/fo.png) off, url(:/image/ico/main/go.png) on;
 }
@@ -41,7 +54,9 @@ QPushButton#m_pHistoryButton
 }*/
 
 QPushButton:pressed{
-        background: rgb(13, 191, 239);
+    border: 0px solid #529BFF;
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #0EBEEF, stop: 1 #349DEE);
 }
 
 /*QPushButton:checked{

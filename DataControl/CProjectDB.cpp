@@ -107,6 +107,7 @@ void CProjectDB::_InitPersonInfoDB()
                                   "Name VARCHAR,"
                                   "Gender VARCHAR,"
                                   "Age VARCHAR,"
+                                  "AgeType VARCHAR," // 年龄类型Year,Month
                                   "Department VARCHAR," // 科室
                                   "AdmissionNumber VARCHAR," // 住院号
                                   "BedNumber VARCHAR," // 床号
