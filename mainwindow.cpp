@@ -159,6 +159,8 @@ void MainWindow::_InitWidget()
 //    m_pStackedWidget->setStyleSheet("QWidget{background-color:#00F6Fb;border-radius:15px;}");
     // 状态栏
     m_pCPageStatusWidget = new CPageStatusWidget(this);
+    m_pCPageStatusWidget->setAttribute(Qt::WA_StyledBackground,true);
+    m_pCPageStatusWidget->setObjectName("m_pCPageStatusWidget");
     connect(m_pCPageStatusWidget, &CPageStatusWidget::SignalShowMenu,
             this, &MainWindow::SlotShwoMenu);
 

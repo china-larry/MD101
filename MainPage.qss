@@ -1,7 +1,27 @@
+QLabel#m_pTestInfoLabel
+{
+    font-family:"Source Han Sans CN";
+    font-size: 22px;
+    color:#232323;
+/*    font-weight:bold;*/
+}
+QLabel#m_pSystemTimeLabel
+{
+    font-family:"Source Han Sans CN";
+    font-size: 22px;
+    color:#000;
+/*    font-weight:bold;*/
+}
 QWidget#m_pCTestPage
 {
     background-color:#F1F6Fb;
+    border-radius:0px;
+    border: 0px solid #529BFF;
+}
+QWidget#m_pCPageStatusWidget
+{
     border-radius:10px;
+    image: url(:/image/ico/status/footer.png);
 }
 QStackedWidget
 {
@@ -31,6 +51,26 @@ QLineEdit#m_pUserNameLineEdit
     qproperty-iconSize:50px 50px;
     qproperty-icon: url(:/image/ico/main/fo.png) off, url(:/image/ico/main/go.png) on;
 }*/
+QPushButton#m_pMenuButton
+{
+    border: 0px solid #529BFF;
+    background-color: rgba(0, 0, 255, 0);;
+    font-size:24px;
+    font-family:"Source Han Sans CN";
+    color:#1C6BBE;
+    image: url(:/image/ico/status/menu-normal.png);
+}
+QPushButton:pressed#m_pMenuButton
+{
+    border: 0px solid #529BFF;
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #0EBEEF, stop: 1 #349DEE);
+
+    font-size:24px;
+    font-family:"Source Han Sans CN";
+    color:#FFF;
+    image: url(:/image/ico/status/menu-pressed.png);
+}
 QPushButton#m_pStatusButton
 {
     border: 0px solid #529BFF;

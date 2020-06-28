@@ -38,5 +38,23 @@
         <file>ico/test/close-door-pressed.png</file>
         <file>ico/test/open-door-normal.png</file>
         <file>ico/test/open-door-pressed.png</file>
+        <file>ico/status/blue.png</file>
+        <file>ico/status/icon_LIS.png</file>
+        <file>ico/status/icon_LIS_close.png</file>
+        <file>ico/status/logs-bg.png</file>
+        <file>ico/status/menu-normal.png</file>
+        <file>ico/status/menu-pressed.png</file>
+        <file>ico/status/sound-close.png</file>
+        <file>ico/status/sound-open.png</file>
+        <file>ico/status/udisk.png</file>
+        <file>ico/status/wifi2.png</file>
+        <file>ico/status/wifi3.png</file>
+        <file>ico/status/wifi1.png</file>
+        <file>ico/status/wifi-close.png</file>
+        <file>ico/status/footer.png</file>
+        <file>ico/test/next-normal.png</file>
+        <file>ico/test/next-pressed.png</file>
+        <file>ico/test/pre-normal.png</file>
+        <file>ico/test/pre-pressed.png</file>
     </qresource>
 </RCC>

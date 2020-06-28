@@ -91,7 +91,7 @@ QPushButton#m_pPreStepButton
     border: 0px solid #529BFF;
     font-size:22px;
     color:#FCFCFC;
-    image: url(:/image/ico/test/open-door-normal.png);
+    image: url(:/image/ico/test/pre-normal.png);
 }
 QPushButton:pressed#m_pPreStepButton
 {
@@ -100,7 +100,7 @@ QPushButton:pressed#m_pPreStepButton
     border: 0px solid #529BFF;
     font-size:22px;
     color:#FCFCFC;
-    image: url(:/image/ico/test/open-door-pressed.png);
+    image: url(:/image/ico/test/pre-pressed.png);
 }
 QPushButton#m_pNextStepButton
 {
@@ -109,7 +109,7 @@ QPushButton#m_pNextStepButton
     border: 0px solid #529BFF;
     font-size:22px;
     color:#FCFCFC;
-    image: url(:/image/ico/test/close-door-normal.png);
+    image: url(:/image/ico/test/next-normal.png);
 }
 QPushButton:pressed#m_pNextStepButton
 {
@@ -118,7 +118,7 @@ QPushButton:pressed#m_pNextStepButton
     border: 0px solid #529BFF;
     font-size:22px;
     color:#FCFCFC;
-    image: url(:/image/ico/test/close-door-pressed.png);
+    image: url(:/image/ico/test/next-pressed.png);
 }
 QPushButton#m_pStopTestButton
 {
@@ -210,14 +210,7 @@ QComboBox#m_pAgeWidget
     border-radius:10px;
 
 }
-QComboBox QAbstractItemView#m_pAgeWidget
-{
-        border: 2px solid darkgray;/*下拉列表的边线的粗细、实虚*/
-        selection-background-color: #248CEB;/*下拉列表选中的行的背景色*/
-        color: #000; /* text color */
-        font-family: "Source Han Sans CN";
-        font-size: 22px;
-}
+
 
 QComboBox
 {
@@ -251,7 +244,8 @@ QComboBox::down-arrow {
 }
 QComboBox QAbstractItemView
 {
-        border: 2px solid darkgray;/*下拉列表的边线的粗细、实虚*/
+        border: 0px solid darkgray;/*下拉列表的边线的粗细、实虚*/
+        border-radius:10px;
         selection-background-color: #248CEB;/*下拉列表选中的行的背景色*/
         color: #000; /* text color */
         font-family: "Source Han Sans CN";

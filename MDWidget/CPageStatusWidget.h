@@ -30,7 +30,11 @@ private:
     //
     QPushButton *m_pMenuButton;//
     QLabel *m_pLogsLabel;
+    QLabel *m_pUDiskLabel;
+    QLabel *m_pBlueLabel;
     QLabel *m_pWifiLabel;
+    QLabel *m_pLISLabel;
+    QLabel *m_pSoundLabel;
     QLabel *m_pSystemTimeLabel;
     QTimer *qProgressTimer;
 };

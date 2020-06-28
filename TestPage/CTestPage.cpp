@@ -74,7 +74,7 @@ void CTestPage::_InitWidget()
             this, &CTestPage::_SlotPreStep);
     m_pPreStepButton->hide();
     //
-    m_pNextStepButton = new QPushButton(tr("    下一步"), this);
+    m_pNextStepButton = new QPushButton(tr("下一步   "), this);
     m_pNextStepButton->setFixedSize(158, 50);
     m_pNextStepButton->setObjectName("m_pNextStepButton");
     connect(m_pNextStepButton, &QPushButton::clicked,
