@@ -1,18 +1,47 @@
 QLabel
 {
-    font-family:"Arial";
-    font-size: 23px;
-    color:#000;
+    font-family:"Source Han Sans CN";
+    font-size: 24px;
+    color:#232323;
 /*    font-weight:bold;*/
 }
 QLabel#m_pNameLabel
 {
-    font-family:"Arial";
-    font-size: 23px;
-    color:#1574C8;
+    font-family:"Source Han Sans CN";
+    font-size: 26px;
+    color:#1574C9;
 /*    font-weight:bold;*/
 }
-
+QLabel#m_pTitleLabel
+{
+    font-family:"Source Han Sans CN";
+    font-size: 26px;
+    color:#000;
+/*    font-weight:bold;*/
+}
+QLabel#m_pCardIDLabel
+{
+    font-family:"Source Han Sans CN";
+    font-size: 28px;
+    color:#EC6853;
+    font-weight:bold;
+}
+QLabel#m_pShowVedioLabel
+{
+    background-color: #CEDFEF;
+    border: 0px solid #529BFF;
+    border-radius: 5px;
+}
+QLabel#m_pInfoLabel
+{
+    font-family:"Source Han Sans CN";
+    font-size: 22px;
+    color:#fff;
+    border: 0px solid #529BFF;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #1BBC9B;
+}
 QWidget#m_pCShowImageWidget
 {
     background-color:#FFF;
@@ -31,122 +60,181 @@ QWidget#m_pCSampleInfoWidget
     border-radius:10px;
 }
 
-QLabel#m_pTitleLabel
-{
-    font-family:"Arial";
-    font-size: 25px;
-    color:#000;
-/*    font-weight:bold;*/
-}
-QLabel#m_pShowVedioLabel
-{
-    background-color: #CEDFEF;
-    border: 0px solid #529BFF;
-    border-radius: 5px;
-}
-QLabel#m_pInfoLabel
-{
-    font-family:"Arial";
-    font-size: 23px;
-    color:#fff;
-    border: 0px solid #529BFF;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
-    background-color: #1BBC9B;
-}
 QLineEdit
 {
-    min-height: 50px;
+    min-height: 52px;
     min-width: 230px;
     max-width: 230px;
     color: #000; /* text color */
-    font-family: "Arial";
-    font-size: 18px;
-    border: 2px solid #DADEE7;
+    font-family: "Source Han Sans CN";
+    font-size: 22px;
+    border: 1px solid #CAD2DC;
     border-radius:10px;
     padding: 0 0px;
 }
 QLineEdit#m_pAgeLineWidget
 {
-    min-height: 50px;
+    min-height: 52px;
     min-width: 90px;
     max-width: 90px;
-    background: rgb(128, 146, 192);
-    border: 0px solid #529BFF;
-    border-radius: 5px;
-    font-family:"Arial";
-    font-size: 23px;
-    color:#ffffff
+    color: #000; /* text color */
+    font-family: "Source Han Sans CN";
+    font-size: 22px;
+    border: 2px solid #DADEE7;
+    border-radius: 10px;
+    padding: 0 0px;
 }
-
+QPushButton#m_pPreStepButton
+{
+    background-color: rgba(0, 0, 255, 0);;
+    border-radius: 10px;
+    border: 0px solid #529BFF;
+    font-size:22px;
+    color:#FCFCFC;
+    image: url(:/image/ico/test/open-door-normal.png);
+}
+QPushButton:pressed#m_pPreStepButton
+{
+    background-color: rgba(0, 0, 255, 0);;
+    border-radius: 10px;
+    border: 0px solid #529BFF;
+    font-size:22px;
+    color:#FCFCFC;
+    image: url(:/image/ico/test/open-door-pressed.png);
+}
 QPushButton#m_pNextStepButton
 {
-    background: #248CEB;
+    background-color: rgba(0, 0, 255, 0);;
     border-radius: 10px;
     border: 0px solid #529BFF;
-    font-size:20px;
-    font-family:Arial;
-    color:#FFF;
-    qproperty-iconSize:50px 50px;
-    qproperty-icon: url(:/image/ico/main/fo.png) off, url(:/image/ico/main/go.png) on;
-}
-QPushButton#m_pStopTestButton
-{
-    background: #248CEB;
-    border-radius: 10px;
-    border: 0px solid #529BFF;
-    font-size:20px;
-    font-family:Arial;
-    color:#FFF;
-    qproperty-iconSize:50px 50px;
-    qproperty-icon: url(:/image/ico/main/fo.png) off, url(:/image/ico/main/go.png) on;
+    font-size:22px;
+    color:#FCFCFC;
+    image: url(:/image/ico/test/close-door-normal.png);
 }
 QPushButton:pressed#m_pNextStepButton
 {
+    background-color: rgba(0, 0, 255, 0);;
+    border-radius: 10px;
     border: 0px solid #529BFF;
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-        stop: 0 #0EBEEF, stop: 1 #349DEE);
+    font-size:22px;
+    color:#FCFCFC;
+    image: url(:/image/ico/test/close-door-pressed.png);
 }
-
-
+QPushButton#m_pStopTestButton
+{
+    background-color: rgba(0, 0, 255, 0);;
+    border-radius: 10px;
+    border: 0px solid #529BFF;
+    font-size:22px;
+    color:#FCFCFC;
+    image: url(:/image/ico/test/stoptest-normal.png);
+}
 QPushButton:pressed#m_pStopTestButton
 {
+    background-color: rgba(0, 0, 255, 0);;
+    border-radius: 10px;
     border: 0px solid #529BFF;
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
-        stop: 0 #0EBEEF, stop: 1 #349DEE);
+    font-size:22px;
+    color:#FCFCFC;
+    image: url(:/image/ico/test/stoptest-pressed.png);
 }
+QPushButton#m_pCloseDoorButton
+{
+    background-color: rgba(0, 0, 255, 0);;
+    border-radius: 10px;
+    border: 0px solid #529BFF;
+    font-size:22px;
+    color:#FCFCFC;
+    image: url(:/image/ico/test/close-door-normal.png);
+}
+QPushButton:pressed#m_pCloseDoorButton
+{
+    background-color: rgba(0, 0, 255, 0);;
+    border-radius: 10px;
+    border: 0px solid #529BFF;
+    font-size:22px;
+    color:#FCFCFC;
+    image: url(:/image/ico/test/close-door-pressed.png);
+}
+QPushButton#m_pOpenDoorButton
+{
+    background-color: rgba(0, 0, 255, 0);;
+    border-radius: 10px;
+    border: 0px solid #529BFF;
+    font-size:22px;
+    color:#FCFCFC;
+    image: url(:/image/ico/test/open-door-normal.png);
+}
+QPushButton:pressed#m_pOpenDoorButton
+{
+    background-color: rgba(0, 0, 255, 0);;
+    border-radius: 10px;
+    border: 0px solid #529BFF;
+    font-size:22px;
+    color:#FCFCFC;
+    image: url(:/image/ico/test/open-door-pressed.png);
+}
+
+QPushButton#m_pStartTestButton
+{
+    background-color: rgba(0, 0, 255, 0);;
+    border-radius: 10px;
+    border: 0px solid #529BFF;
+    font-size:22px;
+    color:#FCFCFC;
+    image: url(:/image/ico/test/starttest-normal.png);
+}
+QPushButton:pressed#m_pStartTestButton
+{
+    background-color: rgba(0, 0, 255, 0);;
+    border-radius: 10px;
+    border: 0px solid #529BFF;
+    font-size:22px;
+    color:#FCFCFC;
+    image: url(:/image/ico/test/starttest-pressed.png);
+}
+
 
 /*QPushButton:checked{
         background: green;
 }*/
 QComboBox#m_pAgeWidget
 {
-    height: 50px;
+    height: 52px;
     min-width: 128px;
     max-width: 128px;
     color: #000; /* text color */
-    font-family: "Arial";
+    font-family: "Source Han Sans CN";
     font-size: 22px;
-    border: 2px solid #529BFF;
-    border-radius:5px;
+    border: 2px solid #DADEE7;
+    border-radius:10px;
 
 }
+QComboBox QAbstractItemView#m_pAgeWidget
+{
+        border: 2px solid darkgray;/*下拉列表的边线的粗细、实虚*/
+        selection-background-color: #248CEB;/*下拉列表选中的行的背景色*/
+        color: #000; /* text color */
+        font-family: "Source Han Sans CN";
+        font-size: 22px;
+}
+
 QComboBox
 {
-    height: 50px;
+    height: 52px;
     min-width: 230px;
     max-width: 230px;
     color: #000; /* text color */
-    font-family: "Arial";
+    font-family: "Source Han Sans CN";
     font-size: 22px;
-    border: 2px solid #529BFF;
-    border-radius:5px;
+    border: 2px solid #DADEE7;
+    border-radius:10px;
 
 }
 QComboBox::drop-down {
     subcontrol-origin: padding;
     subcontrol-position: top right;
-    width: 40px;
+    width: 1px;
 
     border-left-width: 0px;
     border-left-color: darkgray;
@@ -156,21 +244,24 @@ QComboBox::drop-down {
 }
 
 QComboBox::down-arrow {
+    width: 56px;
+    height: 56px;
     image: url(:/image/ico/login/commod.png);
+    padding: 0px 55px 0px 0px;
 }
 QComboBox QAbstractItemView
 {
         border: 2px solid darkgray;/*下拉列表的边线的粗细、实虚*/
-        selection-background-color: blue;/*下拉列表选中的行的背景色*/
+        selection-background-color: #248CEB;/*下拉列表选中的行的背景色*/
         color: #000; /* text color */
-        font-family: "Arial";
+        font-family: "Source Han Sans CN";
         font-size: 22px;
 }
 QComboBox QAbstractItemView::item
 {
-        min-height: 60px;/*下拉列表的行高，也可以看做行距*/
+        min-height: 52px;/*下拉列表的行高，也可以看做行距*/
         color: #000; /* text color */
-        font-family: "Arial";
+        font-family: "Source Han Sans CN";
         font-size: 22px;
 }
 /*垂直滚动条整体*/

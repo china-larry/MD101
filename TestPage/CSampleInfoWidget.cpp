@@ -10,24 +10,35 @@ CSampleInfoWidget::CSampleInfoWidget(QWidget *parent) : QWidget(parent)
 
 void CSampleInfoWidget::_InitWidget()
 {
-    m_pCLabelMarkWidget = new CLabelMarkWidget(tr("卡盒信息"), this);
-    m_pProjectNameWidget = new CHLabelLineEditWidget(tr("项目名称"), tr(""), this);
+    m_pCLabelMarkWidget = new CLabelMarkWidget(tr("样本信息"), this);
+    QStringList strProjectNameList;
+    strProjectNameList << "FLuA/B";
+    m_pProjectNameWidget = new CLabelCommoBoxWidget(tr("项目名称"), strProjectNameList, this);
+//    m_pProjectNameWidget->hide();
     m_pSampleIDWidget = new CHLabelLineEditWidget(tr("样本编号"), tr(""), this);
     QStringList strSampleTypeList;
     strSampleTypeList << tr("全血") << tr("血清");
     m_pSampleTypeWidget = new CLabelCommoBoxWidget(tr("样本类型"), strSampleTypeList, this);
     m_pNameWidget = new CHLabelLineEditWidget(tr("姓名"), tr(""), this);
-    m_pGenderWidget = new CHLabelLineEditWidget(tr("性别"), tr(""), this);
-    m_pAgeWidget = new CLabelLineCommoBoxWidget(tr("年龄"), "", strSampleTypeList, this);
+    QStringList strGenderList;
+    strGenderList << tr("男") << tr("女");
+    m_pGenderWidget = new CLabelCommoBoxWidget(tr("性别"), strGenderList, this);
+    QStringList strAgeList;
+    strAgeList << "岁" << "月";
+    m_pAgeWidget = new CLabelLineCommoBoxWidget(tr("年龄"), "", strAgeList, this);
     m_pAgeWidget->SetLineEditObjectName("m_pAgeLineWidget");
 //    m_pAgeWidget->SetLineEditFixSize(90, 50);
     m_pAgeWidget->SetCommoBoxObjectName("m_pAgeWidget");
-    m_pDepartmentWidget = new CLabelCommoBoxWidget(tr("科室"), strSampleTypeList, this);
+    QStringList strDepartmentList;
+    strDepartmentList << "体检中心" << "ICU";
+    m_pDepartmentWidget = new CLabelCommoBoxWidget(tr("科室"), strDepartmentList, this);
     m_pAdmissionNumberWidget = new CHLabelLineEditWidget(tr("住院号"), tr(""), this);
     m_pBedNumberWidget = new CHLabelLineEditWidget(tr("床号"), tr(""), this);
-    m_pReferralDoctorWidget = new CLabelCommoBoxWidget(tr("送检医生"), strSampleTypeList, this);
-    m_pInspctorNameWidget = new CLabelCommoBoxWidget(tr("检验医生"), strSampleTypeList, this);
-    m_pReviewersNameWidget = new CLabelCommoBoxWidget(tr("复核者"), strSampleTypeList, this);
+    QStringList strDoctorList;
+    strDoctorList << "李医生" << "王医生";
+    m_pReferralDoctorWidget = new CLabelCommoBoxWidget(tr("送检医生"), strDoctorList, this);
+    m_pInspctorNameWidget = new CLabelCommoBoxWidget(tr("检验医生"), strDoctorList, this);
+    m_pReviewersNameWidget = new CLabelCommoBoxWidget(tr("复核者"), strDoctorList, this);
     m_pSamplingTimeWidget = new CLabelDateWidget(tr("采样时间"), QDate::currentDate(), this);
     m_pSubmissionTimeWidget = new CLabelDateWidget(tr("送检时间"), QDate::currentDate(), this);
 }

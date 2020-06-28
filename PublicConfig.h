@@ -25,6 +25,7 @@ const QString gc_strSystemDBConnect ="system_connect";
 
 static const int gk_iReSendTimes = 3;// 重发次数
 static const int gk_iWaitMsecs = 1000;// 重发等待时间间隔
+
 struct SCanBusDeviceStruct
 {
     QString strPlugin;// 接口类型
@@ -52,9 +53,56 @@ typedef struct {
     QString iconPath;
     QString singer;
     QString songsNb;
-} MuItemData;
+} SMuItemDataStruct;
+// 测试步骤
+enum EnumTestStep
+{
+    CardINfo = 0,        // 扫描试剂盒ID
+    SampleInfo = 1,       // 样本信息
+    AddSample = 2, // 加样
+    OutCardChip = 3, // 拔出芯片
+    StartTest = 4, // 开始测试
+};
+// 卡盒信息
+struct SCardInfoStruct
+{
+    QString strCardID;
+    QString strProjectName;
+    QString strProjectLot;
+    QString strExpirationDate;
+    QString strCardVersion;
+};
+// 病人信息
+struct SPatientInfoStruct
+{
+    QString strPatientID;
+    QString strName;
+    QString strGender;
+    QString strAge;
+    QString strAgeType;
+    QString strDepartment;
+    QString strAdmissionNumber;
+    QString strBedNumber;
+    QString strReferralDoctor;
+    QString strInspctorName;
+    QString strReviewersName;
+    QString strSamplingTime;
+    QString strSubmissionTime;
+};
+// 样本信息
+struct SSampleInfoStruct
+{
+    QString strSampleID;
+    QString strSampleType;
+    QString strSerialNo;
+    QString strSampleNumber;
+    QString strApplicationTime;
+    QString strSourceFrom;
+    QString strCardID;
+    QString strPatientID;
+};
 
-Q_DECLARE_METATYPE(MuItemData)
+Q_DECLARE_METATYPE(SMuItemDataStruct)
 
 
 

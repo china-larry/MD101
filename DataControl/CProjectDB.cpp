@@ -46,9 +46,9 @@ void CProjectDB::_InitCardInfoDB()
                                   "id INTEGER PRIMARY KEY AUTOINCREMENT,"
                                   "CardID VARCHAR,"
                                   "ProjectName VARCHAR,"
-                                  "CardVersion VARCHAR,"
-                                  "ExpirationDate VARCHAR,"
                                   "ProductLot VARCHAR,"
+                                  "ExpirationDate VARCHAR,"
+                                  "CardVersion VARCHAR,"
                                   "Remarks VARCHAR)";
 
        // qDebug() << "cread history " << strCreateTable;

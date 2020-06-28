@@ -19,11 +19,11 @@ private:
 
 private:
     CLabelMarkWidget *m_pCLabelMarkWidget;
-    CHLabelLineEditWidget *m_pProjectNameWidget; // 项目名称
+    CLabelCommoBoxWidget *m_pProjectNameWidget; // 项目名称
     CHLabelLineEditWidget *m_pSampleIDWidget; // 样本编号
     CLabelCommoBoxWidget *m_pSampleTypeWidget;// 样本类型
     CHLabelLineEditWidget *m_pNameWidget;// 姓名
-    CHLabelLineEditWidget *m_pGenderWidget;//  性别
+    CLabelCommoBoxWidget *m_pGenderWidget;//  性别
     CLabelLineCommoBoxWidget *m_pAgeWidget;// 年龄
     CLabelCommoBoxWidget *m_pDepartmentWidget;// 科室
     CHLabelLineEditWidget *m_pAdmissionNumberWidget;// 住院号

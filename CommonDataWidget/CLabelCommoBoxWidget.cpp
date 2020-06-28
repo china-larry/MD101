@@ -69,7 +69,7 @@ CLabelCommoBoxWidget::CLabelCommoBoxWidget(QString strLabel, QStringList strComb
 {
     m_pLabel = new QLabel(strLabel, this);
     m_pComboBox = new QComboBox(this);
-    m_pComboBox->setMaximumWidth(180);
+//    m_pComboBox->setMaximumWidth(180);
     m_pComboBox->setMaxVisibleItems(18);//设置最大显示下列项 超过要使用滚动条拖拉
     m_pComboBox->setView(new QListView());
 //    m_pComboBox->setEditable(true);
@@ -214,7 +214,7 @@ CLabelCommoBoxEditWidget::CLabelCommoBoxEditWidget(QString strLabel, QStringList
 //    pCompleter->setCompletionColumn(m_pComboBox->modelColumn());
 //    pCompleter->setCompletionMode(QCompleter::UnfilteredPopupCompletion);
 //    pCompleter->setMaxVisibleItems(5);	//下拉最大高度
-//    pCompleter->popup()->setStyleSheet("QListView{font:75 10pt \"Arial\";subcontrol-origin: padding;subcontrol-position: top right;width: 30px;}");	//设置弹出的补全列表样式
+//    pCompleter->popup()->setStyleSheet("QListView{font:75 10pt \"Source Han Sans CN\";subcontrol-origin: padding;subcontrol-position: top right;width: 30px;}");	//设置弹出的补全列表样式
 
 //    m_pComboBox->setCompleter(pCompleter);	//设置自动补全
     m_pComboBox->setStyleSheet("QComboBox{combobox-popup: 0;}");	//linux系统上，防止下拉框过长

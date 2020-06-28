@@ -11,17 +11,32 @@
         <file>images/PACT.jpg</file>
         <file>images/yang.jpg</file>
         <file>images/zhang.jpg</file>
-        <file>ico/login/commod.png</file>
-        <file>ico/login/icon_userClicked.png</file>
-        <file>ico/login/icon_password_pressed.png</file>
-        <file>ico/login/no_see.png</file>
-        <file>ico/login/see.png</file>
-        <file>ico/login/mdx.jpg</file>
         <file>ico/main/fo.png</file>
         <file>ico/main/go.png</file>
         <file>ico/main/logo.png</file>
+        <file>ico/main/label_mark.png</file>
+        <file>ico/login/mdx.png</file>
+        <file>ico/login/commod.png</file>
         <file>ico/login/icon_password_normal.png</file>
         <file>ico/login/icon_userNormal.png</file>
-        <file>ico/main/label_mark.png</file>
+        <file>ico/login/no_see.png</file>
+        <file>ico/login/see.png</file>
+        <file>ico/login/close_btn_normal.png</file>
+        <file>ico/login/close_btn_pressed.png</file>
+        <file>ico/main/test-back-normal.png</file>
+        <file>ico/main/test-back-pressed.png</file>
+        <file>ico/main/history-back-normal.png</file>
+        <file>ico/main/history-back-pressed.png</file>
+        <file>ico/main/status-back-normal.png</file>
+        <file>ico/main/status-back-pressed.png</file>
+        <file>ico/main/user-icon.png</file>
+        <file>ico/test/starttest-normal.png</file>
+        <file>ico/test/starttest-pressed.png</file>
+        <file>ico/test/stoptest-normal.png</file>
+        <file>ico/test/stoptest-pressed.png</file>
+        <file>ico/test/close-door-normal.png</file>
+        <file>ico/test/close-door-pressed.png</file>
+        <file>ico/test/open-door-normal.png</file>
+        <file>ico/test/open-door-pressed.png</file>
     </qresource>
 </RCC>

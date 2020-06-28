@@ -109,14 +109,14 @@ void MainWindow::mouseMoveEvent(QMouseEvent *event)
         // //-qDebug() << "move point " << m_qMovePoint << m_qPressPoint;
         // 防止闪现
         QPoint qMovePointTemp = m_qMovePoint - m_qPressPoint;
-        if(qMovePointTemp.x() > 30)
-        {
-            qMovePointTemp.setX(30);
-        }
-        if(qMovePointTemp.y() > 30)
-        {
-            qMovePointTemp.setY(30);
-        }
+//        if(qMovePointTemp.x() > 3)
+//        {
+//            qMovePointTemp.setX(3);
+//        }
+//        if(qMovePointTemp.y() > 3)
+//        {
+//            qMovePointTemp.setY(3);
+//        }
         this->move( this->pos() + qMovePointTemp);
 //        m_qPressPoint = m_qMovePoint;
     }
@@ -168,7 +168,7 @@ void MainWindow::_InitWidget()
     QStandardItemModel *pModel = new QStandardItemModel();
     for (int i=0; i<icons.size(); ++i) {
         QStandardItem *pItem = new QStandardItem;
-        MuItemData itemData;
+        SMuItemDataStruct itemData;
         itemData.singer = singers.at(i);
         itemData.songsNb = QString::number(i * i) + "首";
         itemData.iconPath = icons.at(i);

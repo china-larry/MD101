@@ -4,6 +4,7 @@
 #include <QWidget>
 
 #include "CommonDataWidget/CLabelLineEditWidget.h"
+#include "PublicConfig.h"
 class CCardInfoWidget : public QWidget
 {
     Q_OBJECT
@@ -11,6 +12,9 @@ public:
     explicit CCardInfoWidget(QWidget *parent = nullptr);
 
 signals:
+
+public:
+    SCardInfoStruct GetCardInfo();
 private:
     void _InitWidget();
     void _InitLayout();
@@ -21,6 +25,7 @@ private:
     CHLabelLineEditWidget *m_pCardIDWidget;
     QLabel *m_pCardIDLabel;
     CHLabelLineEditWidget *m_pProjectLotWidget;
+    CHLabelLineEditWidget *m_pExpirationDateWidget;
     CHLabelLineEditWidget *m_pCardVersionWidget;
 };
 

@@ -36,22 +36,22 @@ void CPageTitleWidget::_InitWidget()
 {
     SetWidgetBackImage(this, ":/image/ico/title/header.png");
 
-    m_pStatusButton = new QPushButton(tr("  状态"),this);
-    m_pStatusButton->setFixedSize(170, 80);
+    m_pStatusButton = new QPushButton(tr("     状态"),this);
+    m_pStatusButton->setFixedSize(169, 80);
     m_pStatusButton->setObjectName("m_pStatusButton");
     connect(m_pStatusButton, &QPushButton::clicked, this, &CPageTitleWidget::SignalStatusButton);
     m_pStatusButton->setFlat(true);
 //    m_pStatusButton->setStyleSheet("background-color:transparent");
 
-    m_pTestButton = new QPushButton(tr("  测试"),this);
-    m_pTestButton->setFixedSize(170, 80);
+    m_pTestButton = new QPushButton(tr("     测试"),this);
+    m_pTestButton->setFixedSize(169, 80);
     m_pTestButton->setObjectName("m_pTestButton");
     connect(m_pTestButton, &QPushButton::clicked, this, &CPageTitleWidget::SignalTestButton);
     m_pTestButton->setFlat(true);
 //    m_pTestButton->setStyleSheet("background-color:transparent");
 
-    m_pHistoryButton = new QPushButton(tr("  历史"),this);
-    m_pHistoryButton->setFixedSize(170, 80);
+    m_pHistoryButton = new QPushButton(tr("     历史"),this);
+    m_pHistoryButton->setFixedSize(169, 80);
     m_pHistoryButton->setObjectName("m_pHistoryButton");
     connect(m_pHistoryButton, &QPushButton::clicked, this, &CPageTitleWidget::SignalHistoryButton);
     m_pHistoryButton->setFlat(true);
@@ -77,7 +77,7 @@ void CPageTitleWidget::_InitWidget()
     pLineLayout->addSpacerItem(pSpaceItem);
     m_pUserNameLineEdit->setLayout(pLineLayout);
 
-    m_pUserNameImageLabel->setPixmap(QPixmap(":/image/ico/login/icon_userNormal.png"));
+    m_pUserNameImageLabel->setPixmap(QPixmap(":/image/ico/main/user-icon.png"));
 
 }
 /**

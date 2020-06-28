@@ -29,7 +29,7 @@ CLoginInWidget::CLoginInWidget(QWidget *parent) : QWidget(parent)
     this->setFixedSize(1280, 800);
     this->setWindowFlags(Qt::CustomizeWindowHint | Qt::FramelessWindowHint);
     // 设置b背景图片
-    SetWidgetBackImage(this, ":/image/ico/login/mdx.jpg");
+    SetWidgetBackImage(this, ":/image/ico/login/mdx.png");
     //
     LoadQss(this, ":/qss/LoginPage/LoginPage.qss");
     //
@@ -125,6 +125,11 @@ void CLoginInWidget::_SlotCheckLoginButton()
     qDebug() << __FUNCTION__ << __LINE__;
 }
 
+void CLoginInWidget::_SlotCloseButton()
+{
+
+}
+
 void CLoginInWidget::_SlotPasswordChange()
 {
     //this->setFocusPolicy(Qt::StrongFocus);
@@ -160,13 +165,16 @@ void CLoginInWidget::_InitWidget()
    // m_pPasswordLabel->setObjectName("m_pUserNameLabel");
     m_pPasswordWidget = new CPasswordWidget(this);
 //    m_pPasswordLineEdit->setEchoMode(QLineEdit::Password);
-    m_pPasswordWidget->SetFixSize(390, 60);
+    m_pPasswordWidget->SetFixSize(390, 62);
   //  connect(m_pPasswordLineEdit, &QLineEdit::textChanged, this, &CLoginInWidget::_SlotPasswordChange);
 
     m_pLoginButton = new QPushButton(tr("登 录"), this);
     m_pLoginButton->setObjectName("m_pLoginButton");
-
     connect(m_pLoginButton, SIGNAL(clicked(bool)), this, SLOT(_SlotCheckLoginButton()));
+    //
+    m_pCloseButton = new QPushButton(this);
+    m_pCloseButton->setObjectName("m_pCloseButton");
+    connect(m_pCloseButton, SIGNAL(clicked(bool)), this, SLOT(_SlotCloseButton()));
 }
 /**
   * @brief 布局
@@ -194,16 +202,23 @@ void CLoginInWidget::_InitLayout()
     pLoadInHLayout->addWidget(m_pLoginButton);
     pLoadInHLayout->addStretch(1);
     //
+    QHBoxLayout *pCloseHLayout = new QHBoxLayout;
+    pCloseHLayout->addStretch(1);
+    pCloseHLayout->addWidget(m_pCloseButton);
+    pCloseHLayout->addSpacing(40);
+    //
 
     QVBoxLayout *pVLayout = new QVBoxLayout;
     pVLayout->setMargin(0);
-    pVLayout->addSpacing(282);
+    pVLayout->addSpacing(283);
     pVLayout->addLayout(pUserNameLableHLayout);
-    pVLayout->addSpacing(14);
+    pVLayout->addSpacing(20);
     pVLayout->addLayout(pPasswordLineHLayout);
-    pVLayout->addSpacing(55);
+    pVLayout->addSpacing(60);
     pVLayout->addLayout(pLoadInHLayout);
     pVLayout->addStretch(1);
+    pVLayout->addLayout(pCloseHLayout);
+    pVLayout->addSpacing(30);
     //
     this->setLayout(pVLayout);
 }

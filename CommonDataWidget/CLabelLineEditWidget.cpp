@@ -13,6 +13,7 @@
 #include "CLabelLineEditWidget.h"
 #include <QBoxLayout>
 #include <QIntValidator>
+#include <QListView>
 #include "PublicFunction.h"
 CLabelLineEditWidget::CLabelLineEditWidget(QWidget *parent)
     : QWidget(parent),
@@ -171,6 +172,7 @@ CLabelLineCommoBoxWidget::CLabelLineCommoBoxWidget(QString strLabel, QString str
     m_pLabel = new QLabel(strLabel, this);
     m_pLineEdit = new QLineEdit(strLineText, this);
     m_pComboBox = new QComboBox(this);
+    m_pComboBox->setView(new QListView());
     m_pComboBox->addItems(strCommoList);
     this->_InitLayout();
 }

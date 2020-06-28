@@ -18,15 +18,9 @@ CUserNameCommonBox::CUserNameCommonBox(QStringList strComboList, QWidget *parent
 {
     m_pComboBox=new QComboBox(this);
      m_pComboBox->setView(new QListView());
-//    m_pComboBox->setFixedSize(200, 50);
-//    m_pComboBox->setMaxVisibleItems(18);//设置最大显示下列项 超过要使用滚动条拖拉
-//    m_pComboBox->setEditable(true);
     m_pComboBox->setLineEdit(new QTComboBoxButton(m_pComboBox));
-//    m_pComboBox->lineEdit()->setReadOnly(true);
-//    m_pComboBox->lineEdit()->setTextMargins(0, 0, 50, 0);
-
-    m_pComboBox->lineEdit()->setStyleSheet("QLineEdit{padding-left:50px;}\
-                                QLineEdit:focus{padding-left:50px;}");
+    m_pComboBox->lineEdit()->setStyleSheet("QLineEdit{padding-left:60px;}\
+                                QLineEdit:focus{padding-left:60px;}");
 
 
    connect(m_pComboBox, SIGNAL(currentIndexChanged(int)),  this, SIGNAL(SignalCurrentSelectChange(int)));
@@ -54,7 +48,7 @@ CUserNameCommonBox::CUserNameCommonBox(QStringList strComboList, QWidget *parent
 //    pCompleter->setCompletionColumn(m_pComboBox->modelColumn());
 //    pCompleter->setCompletionMode(QCompleter::UnfilteredPopupCompletion);
 //    pCompleter->setMaxVisibleItems(5);	//下拉最大高度
-//    pCompleter->popup()->setStyleSheet("QListView{font:75 10pt \"Arial\";subcontrol-origin: padding;subcontrol-position: top right;width: 30px;}");	//设置弹出的补全列表样式
+//    pCompleter->popup()->setStyleSheet("QListView{font:75 10pt \"Source Han Sans CN\";subcontrol-origin: padding;subcontrol-position: top right;width: 30px;}");	//设置弹出的补全列表样式
 
 //    m_pComboBox->setCompleter(pCompleter);	//设置自动补全
     m_pComboBox->setStyleSheet("QComboBox{combobox-popup: 0;}");	//linux系统上，防止下拉框过长
@@ -62,17 +56,17 @@ CUserNameCommonBox::CUserNameCommonBox(QStringList strComboList, QWidget *parent
 
 
     m_pLabel = new QLabel(this);
-    m_pLabel->setMaximumSize(26,26);
+    m_pLabel->setMaximumSize(28,28);
     m_pLabel->setCursor(QCursor(Qt::ArrowCursor));
 
     QSpacerItem *pSpaceItem = new QSpacerItem(10, 10, QSizePolicy::Expanding);
     QHBoxLayout *pCommonLayout = new QHBoxLayout();
-    pCommonLayout->setContentsMargins(10, 0, 1, 0);
+    pCommonLayout->setContentsMargins(20, 0, 6, 0);
     pCommonLayout->addWidget(m_pLabel);
     pCommonLayout->addSpacerItem(pSpaceItem);
     m_pComboBox->setLayout(pCommonLayout);
 
-    m_pLabel->setPixmap(QPixmap(":/image/ico/login/icon_userClicked.png"));
+    m_pLabel->setPixmap(QPixmap(":/image/ico/login/icon_userNormal.png"));
 
 
     this->_InitLayout();
@@ -159,26 +153,27 @@ CPasswordWidget::CPasswordWidget(QWidget *parent) : QWidget(parent)
     m_pPasswordLineEdit->setObjectName("m_pPasswordLineEdit");
 
     m_pLabel = new QLabel(this);
-    m_pLabel->setMaximumSize(26,26);
+    m_pLabel->setMaximumSize(28,28);
     m_pLabel->setCursor(QCursor(Qt::ArrowCursor));
 
     m_pPasswordHidButton = new QPushButton(this);
-    m_pPasswordHidButton->setFixedSize(30, 30);
+    m_pPasswordHidButton->setFixedSize(56, 56);
     m_pPasswordHidButton->setObjectName("m_pPasswordHidButton");
     m_pPasswordHidButton->setCursor(QCursor(Qt::ArrowCursor));
-    SetButtonBackImage(m_pPasswordHidButton, ":/image/ico/login/see.png");
+    m_pPasswordLineEdit->setEchoMode(QLineEdit::Password);
+    SetButtonBackImage(m_pPasswordHidButton, ":/image/ico/login/no_see.png");
     connect(m_pPasswordHidButton, &QPushButton::clicked,
             this, &CPasswordWidget::_SlotCheckHideButton);
 
     QSpacerItem *pSpaceItem = new QSpacerItem(10, 10, QSizePolicy::Expanding);
     QHBoxLayout *pCommonLayout = new QHBoxLayout();
-    pCommonLayout->setContentsMargins(10, 0, 10, 0);
+    pCommonLayout->setContentsMargins(20, 0, 0, 0);
     pCommonLayout->addWidget(m_pLabel);
     pCommonLayout->addSpacerItem(pSpaceItem);
     pCommonLayout->addWidget(m_pPasswordHidButton);
     m_pPasswordLineEdit->setLayout(pCommonLayout);
 
-    m_pLabel->setPixmap(QPixmap(":/image/ico/login/icon_password_pressed.png"));
+    m_pLabel->setPixmap(QPixmap(":/image/ico/login/icon_password_normal.png"));
 
     this->_InitLayout();
 }

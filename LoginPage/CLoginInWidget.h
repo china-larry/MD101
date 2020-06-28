@@ -31,6 +31,7 @@ private slots:
     void _SlotCheckMinButton();
     void _SlotCheckCloseButton();
     void _SlotCheckLoginButton();
+    void _SlotCloseButton();
 signals:
     void SigShowMainWindow(int iUserPower, QString strUserName);// 显示主窗口
 public slots:
@@ -51,9 +52,9 @@ private:
     // password
     CPasswordWidget *m_pPasswordWidget;
     QPushButton *m_pPasswordHidButton;
-
     //
     QPushButton *m_pLoginButton;
+    QPushButton *m_pCloseButton;
     // 用户数据库
     QString m_strDatabaseName;
     int m_iUserPower; // 用户权限，0为普通，1为管理，2为维护人员

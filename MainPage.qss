@@ -15,39 +15,91 @@ QLineEdit#m_pUserNameLineEdit
     background: rgb(128, 146, 192);
     border: 0px solid #529BFF;
     border-radius: 25px;
-    font-family:"Arial";
-    font-size: 23px;
+    font-family:"Source Han Sans CN";
+    font-size: 22px;
     height: 50px;
     width: 250px;
-    padding-left:50px;
+    padding-left:60px;
     color:#ffffff
 }
-QPushButton#m_pStatusButton
+/*QPushButton#m_pStatusButton
 {
     border: 0px solid #529BFF;
     font-size:25px;
-    font-family:Arial;
-    color:#D7DFE3;    
+    font-family:Source Han Sans CN;
+    color:#D7DFE3;
     qproperty-iconSize:50px 50px;
     qproperty-icon: url(:/image/ico/main/fo.png) off, url(:/image/ico/main/go.png) on;
+}*/
+QPushButton#m_pStatusButton
+{
+    border: 0px solid #529BFF;
+    background-color: rgba(0, 0, 255, 0);;
+    font-size:26px;
+    font-family:"Source Han Sans CN";
+    color:#D7DFE3;
+    image: url(:/image/ico/main/status-back-normal.png);
+}
+QPushButton:pressed#m_pStatusButton
+{
+    border: 0px solid #529BFF;
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #0EBEEF, stop: 1 #349DEE);
+
+    font-size:26px;
+    font-family:"Source Han Sans CN";
+    color:#FFF;
+    image: url(:/image/ico/main/status-back-pressed.png);
 }
 QPushButton#m_pTestButton
 {
-    font-size:25px;
-    font-family:Arial;
+    border: 0px solid #529BFF;
+    background-color: rgba(0, 0, 255, 0);;
+    font-size:26px;
+    font-family:"Source Han Sans CN";
     color:#D7DFE3;
-    qproperty-iconSize:50px 50px;
-    qproperty-icon: url(:/image/ico/main/fo.png) off, url(:/image/ico/main/go.png) on;
+    image: url(:/image/ico/main/test-back-normal.png);
 }
+QPushButton:pressed#m_pTestButton
+{
+    border: 0px solid #529BFF;
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #0EBEEF, stop: 1 #349DEE);
 
+    font-size:26px;
+    font-family:"Source Han Sans CN";
+    color:#FFF;
+    image: url(:/image/ico/main/test-back-pressed.png);
+}
 QPushButton#m_pHistoryButton
 {
+    border: 0px solid #529BFF;
+    background-color: rgba(0, 0, 255, 0);;
+    font-size:26px;
+    font-family:"Source Han Sans CN";
+    color:#D7DFE3;
+    image: url(:/image/ico/main/history-back-normal.png);
+}
+QPushButton:pressed#m_pHistoryButton
+{
+    border: 0px solid #529BFF;
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #0EBEEF, stop: 1 #349DEE);
+
+    font-size:26px;
+    font-family:"Source Han Sans CN";
+    color:#FFF;
+    image: url(:/image/ico/main/history-back-pressed.png);
+}
+
+/*QPushButton#m_pHistoryButton
+{
     font-size:25px;
-    font-family:Arial;
+    font-family:Source Han Sans CN;
     color:#D7DFE3;
     qproperty-iconSize:50px 50px;
     qproperty-icon: url(:/image/ico/main/fo.png) off, url(:/image/ico/main/go.png) on;
-}
+}*/
 
 /*QPushButton:hover{
         background: rgb(85, 85, 85);
